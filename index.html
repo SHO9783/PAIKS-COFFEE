@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
 
-	<title>개인 포폴 1</title>
+	<title>빽다방</title>
 
 	<style>
 		/**********************************************************************************
@@ -150,12 +150,12 @@
 			width:100%;
 			position:relative;
 		}
-		#content-wrap{
+		#cWrap{
 			padding-top:123px;
 		}
 
 		@media (max-width: 1199px) {
-			#content-wrap{padding-top:70px;}
+			#cWrap{padding-top:70px;}
 			.container {
 				width:calc(100% - 20px);
 				padding-left:10px;
@@ -177,6 +177,58 @@
 		.header_box .logo {
 			display:inline-block;
 			width:194px;
+		}
+
+		.header_box .logo.moLogo {
+			display:none;
+		}
+
+		header.nav-icon, .header_box .navbar > li .sub-menu {
+			display:none;
+		}
+
+		header .nav-icon:after,
+		header .nav-icon:before,
+		header .nav-icon div {
+			background-color: #000;
+			-o-border-radius: 3px;
+			-moz-border-radius: 3px;
+			-ms-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+			content: '';
+			display: block;
+			height: 4px;
+			margin: 6px 0;
+			-moz-transition: all .2s ease-in-out;
+			-webkit-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+		}
+
+		header .nav-icon:before {
+			margin-top:0;
+		}
+
+		header .nav-icon:after {
+			margin-bottom:0;
+		}
+
+		header .nav-icon.active:before {
+			transform: translateY(10px) rotate(135deg);
+			-moz-transform: translateY(10px) rotate(135deg);
+			-webkit-transform: translateY(10px) rotate(135deg);
+		}
+
+		header .nav-icon.active:after {
+			transform: translateY(-10px) rotate(-135deg);
+			-moz-transform: translateY(-10px) rotate(-135deg);
+			-webkit-transform: translateY(-10px) rotate(-135deg);
+		}
+
+		header .nav-icon.active div {
+			-moz-transform: scale(0);
+			-webkit-transform: scale(0);
+			transform: scale(0);
 		}
 
 		.header_box .nav_box > li .sub-menu{
@@ -302,7 +354,18 @@
  		}
 
  		@media (max-width: 1199px) {
- 			header .nav .navbar {
+
+
+			header .nav-icon {
+				display:inline;
+				width: 30px !important;
+				cursor:pointer;
+				position:absolute;
+				right:0; top:50%; transform:translateY(-50%);
+				z-index:100;
+			}
+
+ 			header .navbar {
  				position:fixed;
  				width:70%;
  				height:100%;
@@ -317,13 +380,66 @@
  				margin:0;
  			}
 
- 			header .nav .navbar.active {
+ 			header .navbar.active {
  				right:0;
  			}
+
+			header .navbar li a {
+				display:block;
+				width:100%;padding:0 20px;
+				color:#000;
+			}
+
+			header .navbar li {
+				float:none;
+				margin-right:0;
+				line-height:3em;
+				font-size:1rem;
+				border-bottom:1px solid #e5e5e5;
+			}
+
+			header .navbar > li {
+				font-size:1.2rem;
+			}
+
+			.header_box .navbar > li .sub-menu {
+				padding: 10px;
+				background-color: #fff;
+			}
+
+			.header_box .navbar > li .sub-menu li {
+				border-bottom: 1px solid #e5e5e5;
+			}
+
+			.header_box .navbar > li .sub-menu li:last-child {
+				border-bottom: 0;
+			}
+
+			.header_box {
+				height: 70px;
+				display: table;
+			}
+
+			.header_box > .container {
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			.header_box .nav_wrap {
+				position: relative;
+			}
+
+			.header_box .top_box {
+				display: none;
+			}
+
+			.header_box .logo img {
+				width: 50%;
+			}
  		}
 
  		.carousel-1 {
- 			top: 123px;
+ 			top: 68px;
  		}
 
  		.carousel-1 .CarouselContent {
@@ -395,7 +511,7 @@
  		.main_section section {
  			position:relative;
  			overflow:hidden;
- 			top: 123px;
+ 			top: 68px;
  		}
 
  		.main_section section > a {
@@ -697,7 +813,143 @@
 			width:35px;
 		}
 
+		.found_btn {
+			position:fixed;
+			top:100px;
+			right:4%;
+			z-index:2;
+		}
+
+		.found_btn li {
+			width:65px;
+			height:65px;
+			border-radius:100%;
+			box-shadow:5px 5px 10px rgba(0, 0, 0, 0.2);
+			-webkit-box-shadow:5px 5px 10px rgba(0, 0, 0, 0.2);
+		}
+
+		.found_btn li:first-child {
+			margin-bottom:10px;
+		}
+		.found_btn a {
+			display:block;
+			width:100%;
+			height:100%;
+		}
+		.found_btn a img {
+			width:100%;
+		}
+
+		footer {
+			border-top:3px solid #ffe600;
+			position: relative;
+			top: 123px;
+		}
+
+		.in_footer {
+			padding:30px 0;
+			text-align:center;
+			color:#262626;
+			position:relative;
+		}
+
+		.in_footer .company_info {
+			padding-top:30px;
+			margin-bottom:0;
+			font-size:0.812rem;
+		}
+
+		.in_footer .company_info li {
+			display:inline-block;
+			list-style:none;
+			line-height:1.7;
+		}
+
+		.in_footer .company_info li:after {
+			padding:0 14px;
+			content:'l';
+		}
+
+		.in_footer .company_info li:last-child:after {
+			display:none;
+		}
+
+		.in_footer .copyright {
+			margin-top:2rem;
+		}
+
+		.in_footer .r_box {
+			width:100%;
+			max-width:175px;
+			position:absolute;
+			top:30px;
+			right:0;
+			font-size:0.75rem;
+		}
+
+		.in_footer .family_site {
+			width:100%;
+			padding:5px 7px;
+			margin-bottom:25px;
+			border:1px solid #262626;
+			position: relative;
+			cursor: pointer;
+			text-align: left;
+			-webkit-appearance: menulist-button;
+		}
+		.in_footer .family_site #fmenu {
+			display: none;
+			padding: 0 5px;
+			position: absolute;
+			bottom: 28px;
+			left: -1px;
+			right: 0;
+			background: #fff;
+			border: 1px solid #262626;
+			width: 175px;
+
+		}
+
+		.in_footer .family_site #fmenu li {
+			padding: 7px 0;
+		}
+
+		.in_footer .family_site #fmenu li>a {
+			display:block;
+		}
+
+		.in_footer .coupon {
+			text-align:right;
+		}
+		.in_footer .coupon span {
+			margin-right:5px;
+		}
+		.in_footer .logo {
+			display:inline-block;
+			width:179px;
+		}
+
+		@media screen and (max-width:800px) {
+			.in_footer .r_box {
+				display:none;
+			}
+
+			.in_footer .company_info {
+				font-size:1rem;
+			}
+
+			.in_footer .company_info li {
+				display:block;
+			}
+
+			.in_footer .company_info li:after {
+				display:none;
+			}
+
+		}
+
  		@media screen and (min-width:760px) {
+
  			.main_section section a.viewBtn {
  				bottom:25px;
  			}
@@ -772,12 +1024,25 @@
 			.main_sec04 .lWrap .storeBtn .sSearch input:-ms-input-placeholder {
 				color:rgba(14, 52, 126, 0.5);
 			}
+
+			.found_btn li {
+				width:120px;
+				height:120px;
+			}
+
+			.found_btn li:first-child {
+				margin-bottom:15px;
+			}
  		}
 
  		@media screen and (min-width:1020px) {
  			.main_section .sec_hover a img.pc {
  				display:block;
  			}
+
+			.main_section .sec_hover a img.mo {
+				display:none;
+			}
 
  			.main_sec01 {
  				display:table;
@@ -843,10 +1108,25 @@
 				margin-bottom:15px;
 			}
 
-
+			.found_btn li {
+				width:140px;
+				height:140px;
+			}
+			.found_btn li:first-child {
+				margin-bottom:20px;
+			}
  		}
 
  		@media screen and (min-width:1200px) {
+
+			.carousel-1 {
+				top: 123px;
+			}
+
+			.main_section section {
+				top: 123px;
+			}
+
  			.main_section section a.viewBtn {
  				left:50%;
  				right:auto;
@@ -997,6 +1277,10 @@
 			.main_sec04 .lWrap .franchise_bn {
 				background-size:230px auto;
 			}
+
+			.found_btn {
+				top:200px;
+			}
  		}
 
 
@@ -1004,6 +1288,13 @@
  			.main_sec04 .lWrap{
  				width:508px;
  			}
+
+			.found_btn {
+				right:0;
+			}
+			.found_btn li {
+				margin-left:calc(100% - 200px);
+			}
  		}
 	</style>
 </head>
@@ -1024,13 +1315,14 @@
 						<a href="#" class="logo">
 							<img src="img/logo.png" alt="빽다방">
 						</a>
-						
+
+						<div class="nav-icon"><div></div></div>
 						<ul class="navbar">
 							<li class="has-children">
 								<a href="#">빽다방</a>
 
 								<ul class="sub-menu">
-									<li><a href="#">CEO 인사말</a></li>
+									<li><a href="./greeting.html">CEO 인사말</a></li>
 									<li><a href="#">빽다방 소개</a></li>
 									<li><a href="#">멤버십 / 앱 소개</a></li>
 									<li><a href="#">커피 이야</a></li>
@@ -1096,8 +1388,16 @@
 		<div class="cWrap">
 			<div class="cArea">
 				<div class="site-main">
+
+					<ul class="found_btn">
+						<li><a href="#"><img src="img/presentation_btn.png" /></a></li>
+						<li><a href="#"><img src="img/counsel_btn.png" /></a></li>
+					</ul>
+
+
 					<div class="carousel-1 relative con-min-width">
 						<ul class="owl-carousel owl-theme">
+							<li class="CarouselContent" style="background-image:url('img/빽다방_원조커피제로슈거_홈페이지-메인_1920x600_확인용-1920x600.jpg');"></li>
 							<li class="CarouselContent" style="background-image:url('img/빽다방_뱅쇼_홈페이지-메인_1920x600_O_확인용.jpg');"></li>
 							<li class="CarouselContent" style="background-image:url('img/빽다방_명란청양고추소금빵_홈페이지-메인_1920x600_O_확인용.jpg');"></li>
 							<li class="CarouselContent" style="background-image:url('img/빽다방_홈페이지_main_크룽지-1920x600.jpg');"></li>
@@ -1135,6 +1435,7 @@
 									<dd>신선한 뉴크롭 원두를 사용하여<br>추출한 커피메뉴!</dd>
 								</dl>
 								<img class="pc" src="img/main_sec2.jpg" alt="">
+								<img class="mo" src="img/mmain_sec2.jpg" alt="">
 							</a>
 							<a class="viewBtn" href="#"><span>커피 메뉴 보러가기</span></a>
 						</section>
@@ -1147,6 +1448,7 @@
 										<dd>에이드, 티, 주스 등 취향대로<br>골라 먹는 즐거움!</dd>
 									</dl>
 									<img class="pc" src="img/main_sec3.jpg" alt="">
+									<img class="mo" src="img/mmain_sec3.jpg" alt="">
 								</a>
 								<a class="viewBtn" href="#"><span>음료 메뉴 보러가기</span></a>
 							</div>
@@ -1156,7 +1458,8 @@
 										<dt>SWEET<br>PAIK'S CCINO</dt>
 										<dd>달콤 시원한 빽다방<br>시그니처 메뉴!</dd>
 									</dl>
-									<img class="pc"src="img/main_sec4.jpg" alt="">
+									<img class="pc" src="img/main_sec4.jpg" alt="">
+									<img class="mo" src="img/mmain_sec4.jpg" alt="">
 								</a>
 								<a class="viewBtn" href="#"><span>빽스치노 메뉴 보러가기</span></a>
 							</div>
@@ -1170,6 +1473,7 @@
 										<dd>달콤한 아이스크림부터<br>든든한 브레드까지!</dd>
 									</dl>
 									<img class="pc" src="img/main_sec5.jpg" alt="">
+									<img class="mo" src="img/mmain_sec5.jpg" alt="">
 								</a>
 								<a class="viewBtn" href="#"><span>아이스크림/디저트 메뉴 보러가기</span></a>
 							</div>
@@ -1211,15 +1515,78 @@
 							</ul>
 						</div>
 					</div>
+
+
+
 				</div>
 			</div>
 		</div>
+
+		<footer id="footer">
+			<div class="container">
+				<div class="in_footer">
+					<a class="logo" href="#"><img src="img/flogo.png" alt="더본로고"></a>
+					<div class="company_info">
+						<ul>
+							<li>(주)더본코리아</li>
+							<li>사업자등록번호 211-86-00870</li>
+							<li>대표이사 백종원</li>
+						</ul>
+						<ul>
+							<li>주소: 서울시 강남구 봉은사로 1길 39 유성빌딩 5~6층</li>
+							<li>팩스: 02-511-3864</li>
+						</ul>
+						<ul>
+							<li>본사 대표전화: 02-549-3864</li>
+							<li>가맹상담전화: 02-3447-0410</li>
+							<li>고객센터: 1544-2360</li>
+						</ul>
+						<p class="copyright">COPYRIGHTⓒ 2018 THEBORN KOREA INC. ALL RIGHTS RESERVED</p>
+					</div>
+					<div class="r_box">
+						<div id="family_site" class="family_site">
+							<span>패밀리사이트 바로가기</span>
+							<ul id="fmenu">
+								<li><a href="#" target="_blank">더본코리아</a></li>
+								<li><a href="#">창업센터</a></li>
+								<li><a href="#" target="_blank">새마을식당</a></li>
+								<li><a href="#" target="_blank">한신포차</a></li>
+								<li><a href="#" target="_blank">역전우동</a></li>
+								<li><a href="#" target="_blank">백스비어</a></li>
+								<li><a href="#">롤링파스타</a></li>
+								<li><a href="#">인생설렁탕</a></li>
+								<li><a href="#">미정국수</a></li>
+								<li><a href="#">리춘시장</a></li>
+								<li><a href="#" target="_blank">원조쌈밥집</a></li>
+								<li><a href="#">돌배기집</a></li>
+								<li><a href="#">백철판</a></li>
+								<li><a href="#">호텔더본</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="to_top">
+					<span></span>
+				</div>
+			</div>
+		</footer>
 	</div>
 
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-37266520-11"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
+		gtag('config', 'UA-37266520-11');
 
-
-
+		//패밀리사이트
+		jQuery('.family_site').click(function() {
+			jQuery(this).toggleClass("active");
+			jQuery('#fmenu').slideToggle(300);
+		})
+	</script>
 
 
 
