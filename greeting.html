@@ -11,12 +11,17 @@
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo" rel="stylesheet">
 
     <!-- owl 캐러셀 불러오기 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">-->
 
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"/>
     <title>빽다방  :::  ceo 인사말</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
         /**********************************************************************************
                                                 FONTS
         **********************************************************************************/
@@ -154,14 +159,6 @@
             padding-top:123px;
         }
 
-        @media (max-width: 1199px) {
-            #cWrap{padding-top:70px;}
-            .container {
-                width:calc(100% - 20px);
-                padding-left:10px;
-                padding-right:10px;
-            }
-        }
 
         .header_box {
             width:100%;
@@ -355,10 +352,16 @@
 
         @media (max-width: 1199px) {
 
+            #cWrap{padding-top:70px;}
+            .container {
+                width:calc(100% - 20px);
+                padding-left:10px;
+                padding-right:10px;
+            }
 
             header .nav-icon {
                 display:inline;
-                width: 30px !important;
+                width: 30px;
                 cursor:pointer;
                 position:absolute;
                 right:0; top:50%; transform:translateY(-50%);
@@ -441,43 +444,44 @@
         footer {
             border-top:3px solid #ffe600;
             position: relative;
-            top: 123px;
+            top: 870px;
         }
 
-        .in_footer {
+        .fCont {
             padding:30px 0;
             text-align:center;
             color:#262626;
             position:relative;
-            bottom: 0;
+            top: -800px;
+            padding-bottom: 0px !important;
         }
 
-        .in_footer .company_info {
+        footer > .fCont > .company_info {
             padding-top:30px;
             margin-bottom:0;
             font-size:0.812rem;
         }
 
-        .in_footer .company_info li {
+        .fCont .company_info li {
             display:inline-block;
             list-style:none;
             line-height:1.7;
         }
 
-        .in_footer .company_info li:after {
+        .fCont .company_info li:after {
             padding:0 14px;
             content:'l';
         }
 
-        .in_footer .company_info li:last-child:after {
+        .fCont .company_info li:last-child:after {
             display:none;
         }
 
-        .in_footer .copyright {
+        .fCont .copyright {
             margin-top:2rem;
         }
 
-        .in_footer .r_box {
+        .fCont .r_box {
             width:100%;
             max-width:175px;
             position:absolute;
@@ -486,7 +490,7 @@
             font-size:0.75rem;
         }
 
-        .in_footer .family_site {
+        .fCont .families {
             width:100%;
             padding:5px 7px;
             margin-bottom:25px;
@@ -496,7 +500,7 @@
             text-align: left;
             -webkit-appearance: menulist-button;
         }
-        .in_footer .family_site #fmenu {
+        .fCont .families #fmenu {
             display: none;
             padding: 0 5px;
             position: absolute;
@@ -509,39 +513,40 @@
 
         }
 
-        .in_footer .family_site #fmenu li {
+        .fCont .families #fmenu li {
             padding: 7px 0;
         }
 
-        .in_footer .family_site #fmenu li>a {
+        .fCont .families #fmenu li>a {
             display:block;
         }
 
-        .in_footer .coupon {
+        .fCont .coupon {
             text-align:right;
         }
-        .in_footer .coupon span {
+        .fCont .coupon span {
             margin-right:5px;
         }
-        .in_footer .logo {
+        .fCont .logo {
             display:inline-block;
             width:179px;
         }
 
+
         @media screen and (max-width:800px) {
-            .in_footer .r_box {
+            .fCont .r_box {
                 display:none;
             }
 
-            .in_footer .company_info {
+            .fCont .company_info {
                 font-size:1rem;
             }
 
-            .in_footer .company_info li {
+            .fCont .company_info li {
                 display:block;
             }
 
-            .in_footer .company_info li:after {
+            .fCont .company_info li:after {
                 display:none;
             }
 
@@ -815,8 +820,8 @@
         .wrapAbout .ceo_r {
             float: left;
             padding:20px 0;
-            width: 40% !important;
-            box-sizing: content-box !important;
+            width: 40%;
+            box-sizing: content-box;
             /*position: relative;*/
             /*left: calc(50% + 50px);*/
             /*top: -800px;*/
@@ -992,10 +997,14 @@
             .wrapAbout .vision_li dt{font-size:1rem;margin-top:1rem;}
             .wrapAbout .vision_li dd br{display:none;}
         }
+
+        #wrapper {
+            position: relative;
+        }
     </style>
 </head>
 <body>
-    <div class="wrapper">
+    <div id="wrapper">
         <header id="header">
             <div class="header_box">
                 <div class="sub-bg"></div>
@@ -1101,7 +1110,7 @@
                                     <li><a href="#">교육 이야기</a></li>
                                 </ul>
                             </div>
-                            <p><!-- //서브타이틀 --></p>
+                            <p><!-- 서브타이틀 --></p>
                             <p><!-- 서브컨텐츠 --></p>
                             <div class="subSect wrapAbout">
                                 <div class="inner">
@@ -1156,36 +1165,44 @@
                                                             </dd>
                                                         </dl>
                                                     </li>
-                                                </ul></div>
+                                                </ul>
+                                            </div>
                                             <div class="ceo_r">
                                                 <p class="font-l main_tit2 color-1">합리적인 커피 문화를<br />만들어 갑니다.</p>
-                                                <p class="txt"><span>빽다방의 역사는 재미있는 에피소드로 시작합니다.</span><br />
-                                                    2006년, 논현동에 몰려있던 저희 식당들 때문에 식당 주변에 고객들의 불법 주정차가 많았습니다. 이러한 차량 때문에 가장 피해를 많이 보신 분이 저희 원조쌈밥집 입구에 위치한 작은 카페였습니다. 카페 앞 정차 차량으로 인해 항상 죄송한 마음이 있었는데,<br />
-                                                    아예 인수를 하는 것이 어떻겠냐는 카페 사장님의 부탁에 어쩌다 보니 운영하게 된<br />
-                                                    작은 카페가 바로 빽다방의 시초가 되었습니다.</p>
-                                                <p class="txt">막상 가게를 인수하고 나니, 커피 공부를 하지 않을 수 없었습니다.<br />
-                                                    커피에 대해 연구하면서 머릿속으로 수많은 물음표를 만들었습니다.<br />
-                                                    원두의 유통 구조가 어떠하길래 커피가 이렇게 비쌀까? 아이스커피를 목덜미가 서늘할 정도로 시원하게 마실 수 있는 방법은 무엇일까? 내가 좋아하는 믹스커피를 질리지 않게 대용량으로 즐기는 방법은 없을까? 테이크아웃이라고 빵을 못 팔 수는 없지 않을까?</p>
-                                                <p class="txt"><span>이러한 호기심으로 시작했던 작은 카페의 메뉴가 국내를 넘어 세계인에게도 인정받는 시그니처 메뉴인 아이스 아메리카노와 원조커피로 성장하게 되었습니다.</span></p>
-                                                <p class="txt">이는 모두 가성비 중심의 스마트하고, 합리적인 소비를 원하는 고객분들께서 만들어 주신 성장입니다. 그 기대를 저버리지 않기 위한 막중한 책임감을 느끼며 좋은 품질, 부담 없는 가격의 커피와 음료로 보답하겠습니다.</p>
-                                                <p class="txt">항상 친구 같은 편안한 모습으로 여러분 곁에 있고 싶습니다.<br />빽다방과 함께 달콤한 하루 되시기를 바랍니다.</p>
-                                                <p class="ceo_sign"><span>(주)더본코리아 대표이사<br /><em>백 종 원</em></span><span><img src="img/ceo_sign.png" alt=""></span></p>
-                                                </p></div>
-                                            </p></div>
-                                        </p></div>
-                                    </p></div>
+                                                <p class="txt">
+                                                    <span>빽다방의 역사는 재미있는 에피소드로 시작합니다.</span><br /> 2006년, 논현동에 몰려있던 저희 식당들 때문에 식당 주변에 고객들의 불법 주정차가 많았습니다. 이러한 차량 때문에 가장 피해를 많이 보신 분이 저희 원조쌈밥집 입구에 위치한 작은 카페였습니다. 카페 앞 정차 차량으로 인해 항상 죄송한 마음이 있었는데,<br /> 아예 인수를 하는 것이 어떻겠냐는 카페 사장님의 부탁에 어쩌다 보니 운영하게 된<br />작은 카페가 바로 빽다방의 시초가 되었습니다.
+                                                </p>
+                                                <p class="txt">
+                                                    막상 가게를 인수하고 나니, 커피 공부를 하지 않을 수 없었습니다.<br /> 커피에 대해 연구하면서 머릿속으로 수많은 물음표를 만들었습니다.<br /> 아이스커피를 목덜미가 서늘할 정도로 시원하게 마실 수 있는 방법은 무엇일까? 내가 좋아하는 믹스커피를 질리지 않게 대용량으로 즐기는 방법은 없을까? 테이크아웃이라고 빵을 못 팔 수는 없지 않을까?
+                                                </p>
+                                                <p class="txt">
+                                                    <span>이러한 호기심으로 시작했던 작은 카페의 메뉴가 국내를 넘어 세계인에게도 인정받는 시그니처 메뉴인 아이스 아메리카노와 원조커피로 성장하게 되었습니다.</span>
+                                                </p>
+                                                <p class="txt">
+                                                    이는 모두 가성비 중심의 스마트하고, 합리적인 소비를 원하는 고객분들께서 만들어 주신 성장입니다. 그 기대를 저버리지 않기 위한 막중한 책임감을 느끼며 좋은 품질, 부담 없는 가격의 커피와 음료로 보답하겠습니다.
+                                                </p>
+                                                <p class="txt">
+                                                    항상 친구 같은 편안한 모습으로 여러분 곁에 있고 싶습니다.<br />빽다방과 함께 달콤한 하루 되시기를 바랍니다.
+                                                </p>
+                                                <p class="ceo_sign">
+                                                    <span>(주)더본코리아 대표이사<br /><em>백 종 원</em></span><span><img src="img/ceo_sign.png" alt=""></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <p><!-- //서브컨텐츠 --></p>
                         </div><!-- .entry-content -->
                     </article><!-- #post-## -->	</main><!-- .site-main -->
             </div><!-- .content-area -->
 
-        </div> <!-- END #content-wrap -->
+        </div> <!-- END # -->
 
         <footer id="footer">
-            <div class="container">
-                <div class="in_footer">
-                    <a class="logo" href="#"><img src="img/flogo.png" alt="더본로고"></a>
+            <div class="container" style="height: 300px">
+                <div class="fCont">
+                    <a class="logo" href="index.html"><img src="img/flogo.png" alt="더본로고"></a>
                     <div class="company_info">
                         <ul>
                             <li>(주)더본코리아</li>
@@ -1204,7 +1221,7 @@
                         <p class="copyright">COPYRIGHTⓒ 2018 THEBORN KOREA INC. ALL RIGHTS RESERVED</p>
                     </div>
                     <div class="r_box">
-                        <div id="family_site" class="family_site">
+                        <div id="families" class="families">
                             <span>패밀리사이트 바로가기</span>
                             <ul id="fmenu">
                                 <li><a href="#" target="_blank">더본코리아</a></li>
@@ -1242,7 +1259,7 @@
         gtag('config', 'UA-37266520-11');
 
         //패밀리사이트
-        jQuery('.family_site').click(function() {
+        jQuery('.families').click(function() {
             jQuery(this).toggleClass("active");
             jQuery('#fmenu').slideToggle(300);
         })

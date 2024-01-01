@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"/>
+    <title>빽다방  :::  메뉴 목록  :::  신메뉴</title>
+
+    <style>
+        /**********************************************************************************
+												FONTS
+		**********************************************************************************/
+
+        @font-face {
+            font-family: 'Noto Sans KR';
+            font-style: normal;
+            font-weight: 100;
+            src: url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),
+            url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),
+            url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Noto Sans KR';
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'),
+            url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'),
+            url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Noto Sans KR';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),
+            url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),
+            url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Noto Sans KR';
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'),
+            url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'),
+            url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Noto Sans KR';
+            font-style: normal;
+            font-weight: 700;
+            src: url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),
+            url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),
+            url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Noto Sans KR';
+            font-style: normal;
+            font-weight: 900;
+            src: url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),
+            url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),
+            url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
+        /*reset*/
+        html, body {
+            font-family: 'Montserrat','Noto Sans KR',AppleGothic,sans-serif;
+            font-size:100%;
+            color:#202020;
+        }
+        body {
+            line-height: 1;
+            position: relative;
+        }
+
+        ol, ul {
+            list-style: none;
+        }
+
+        p, ul, figure {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        img {
+            /* image-rendering: -moz-pixelated;
+            image-rendering:   -o-pixelated;
+            image-rendering: pixelated; */
+            max-width: 100%;vertical-align: middle;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: inherit;font-weight:700;
+            color: #000;
+            margin: 0;
+        }
+
+        button, textarea, input, select {
+            font-family: inherit;
+            color: inherit;
+            padding: 0;
+        }
+
+        button {
+            border:0;
+            cursor:pointer;
+        }
+
+        .relative {
+            position:relative;
+        }
+
+        .con-min-width {
+            min-width:1180px;
+        }
+
+        .container {
+            max-width:1150px;
+            margin:0 auto;
+            position:relative;
+        }
+
+        .container-full {
+            width:100%;
+            position:relative;
+        }
+
+        #content-wrap {
+            padding-top:123px;
+        }
+
+        @media (max-width: 1199px) {
+            #content-wrap {
+                padding-top:70px;
+            }
+
+            .container {
+                width:calc(100% - 20px);
+                padding-left:10px;
+                padding-right:10px;
+            }
+        }
+
+        .header_box {
+            width:100%;
+            height:123px;
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:999;
+            background:#fff;
+            transition:.3s ease;
+        }
+
+        .header_box .logo {
+            display:inline-block;
+            width:194px;
+        }
+
+        .header_box .logo.moLogo {
+            display:none;
+        }
+
+        header.nav-icon, .header_box .navbar > li .sub-menu {
+            display:none;
+        }
+
+        header .nav-icon:after,
+        header .nav-icon:before,
+        header .nav-icon div {
+            background-color: #000;
+            -o-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            content: '';
+            display: block;
+            height: 4px;
+            margin: 6px 0;
+            -moz-transition: all .2s ease-in-out;
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+
+        header .nav-icon:before {
+            margin-top:0;
+        }
+
+        header .nav-icon:after {
+            margin-bottom:0;
+        }
+
+        header .nav-icon.active:before {
+            transform: translateY(10px) rotate(135deg);
+            -moz-transform: translateY(10px) rotate(135deg);
+            -webkit-transform: translateY(10px) rotate(135deg);
+        }
+
+        header .nav-icon.active:after {
+            transform: translateY(-10px) rotate(-135deg);
+            -moz-transform: translateY(-10px) rotate(-135deg);
+            -webkit-transform: translateY(-10px) rotate(-135deg);
+        }
+
+        header .nav-icon.active div {
+            -moz-transform: scale(0);
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+
+        .header_box .nav_box > li .sub-menu{
+            display:none;
+        }
+
+        @media (min-width: 1200px) {
+            .sub-bg{
+                width: 100%;
+                height: 0;
+                position: absolute;
+                top: 123px;
+                left: 0;
+                background: url(img/menu-bg.jpg)repeat-x top left;
+                background-color: #f8f8f8;
+                transition: height .2s ease-in-out;
+                -webkit-transition: height .2s ease-in-out;
+            }
+
+            .sub-bg.on{
+                height:159px;
+            }
+
+            .header_box .top_box {
+                text-align:right;
+                padding-top:18px;
+            }
+
+            .header_box .top_box li {
+                display:inline-block;
+                font-size:0.75rem;
+                font-weight:300;
+                color:#8b8b8b;
+            }
+
+            .header_box .top_box li:after {
+                display:inline-block;
+                width:1px;
+                height:10px;
+                margin:14px;
+                vertical-align:middle;
+                background:#e0e0e0;content:'';
+            }
+
+            .header_box .top_box li:nth-child(3) {
+                margin-right:15px;
+            }
+
+            .header_box .top_box li:nth-child(3):after, .header_box .top_box .sns:after {
+                display: none;
+            }
+
+            .header_box .top_box .sns {
+                margin:0 3px;
+                font-size:0;
+                vertical-align:middle;
+            }
+            .header_box .top_box .sns.f a:before {
+                content:url(img/topbar1.jpg);
+            }
+            .header_box .top_box .sns.i a:before {
+                content:url(img/topbar2.jpg);
+            }
+
+            .header_box .nav_box {
+                margin-top:-20px;
+                display:flex;
+                align-items:flex-end;
+                justify-content:space-between;
+            }
+
+            .header_box .navbar {
+                margin:0 -39px;
+            }
+
+            .header_box .navbar > li {
+                display:inline-block;
+                padding:0 39px;
+                list-style:none;
+                font-size:0.937rem;
+            }
+
+            .header_box .navbar > li > a {
+                position:relative;
+            }
+
+            .header_box .navbar > li .sub-menu {
+                width:14.285%;
+                padding-top:40px;
+                position:absolute;
+                display:none;
+                opacity:0;
+                visibility:hidden;
+                transition:visibility 0s,opacity 0.5s linear;
+            }
+
+            .header_box .navbar > li .sub-menu li {
+                list-style:none;
+                color:#202020;
+                font-weight:300;
+                font-size:0.937rem;
+                line-height:1.8;
+            }
+
+            .header_box .navbar > li:hover .sub-menu {
+                display:block;
+                opacity:1;
+                visibility:visible;
+            }
+
+            .header_box .navbar > li .sub-menu li:hover {
+                font-weight:700;
+            }
+
+            .header_box .navbar > li.has-children:hover > a:before {
+                display:block;
+                position:absolute;
+                left:50%;
+                top:38px;
+                transform:translateX(-50%);
+                content:url(img/menu-arr.png);
+            }
+        }
+
+        @media (max-width: 1199px) {
+
+
+            header .nav-icon {
+                display:inline;
+                width: 30px !important;
+                cursor:pointer;
+                position:absolute;
+                right:0; top:50%; transform:translateY(-50%);
+                z-index:100;
+            }
+
+            header .navbar {
+                position:fixed;
+                width:70%;
+                height:100%;
+                top:70px;right:-70%;
+                background:#fafafa;
+                z-index:99;
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                -ms-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+                margin:0;
+            }
+
+            header .navbar.active {
+                right:0;
+            }
+
+            header .navbar li a {
+                display:block;
+                width:100%;padding:0 20px;
+                color:#000;
+            }
+
+            header .navbar li {
+                float:none;
+                margin-right:0;
+                line-height:3em;
+                font-size:1rem;
+                border-bottom:1px solid #e5e5e5;
+            }
+
+            header .navbar > li {
+                font-size:1.2rem;
+            }
+
+            .header_box .navbar > li .sub-menu {
+                padding: 10px;
+                background-color: #fff;
+            }
+
+            .header_box .navbar > li .sub-menu li {
+                border-bottom: 1px solid #e5e5e5;
+            }
+
+            .header_box .navbar > li .sub-menu li:last-child {
+                border-bottom: 0;
+            }
+
+            .header_box {
+                height: 70px;
+                display: table;
+            }
+
+            .header_box > .container {
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            .header_box .nav_wrap {
+                position: relative;
+            }
+
+            .header_box .top_box {
+                display: none;
+            }
+
+            .header_box .logo img {
+                width: 50%;
+            }
+        }
+
+        footer {
+            border-top:3px solid #ffe600;
+            position: relative;
+            top: 123px;
+        }
+
+        .fCont {
+            padding:30px 0;
+            text-align:center;
+            color:#262626;
+            position:relative;
+        }
+
+        .fCont .company_info {
+            padding-top:30px;
+            margin-bottom:0;
+            font-size:0.812rem;
+        }
+
+        .fCont .company_info li {
+            display:inline-block;
+            list-style:none;
+            line-height:1.7;
+        }
+
+        .fCont .company_info li:after {
+            padding:0 14px;
+            content:'l';
+        }
+
+        .fCont .company_info li:last-child:after {
+            display:none;
+        }
+
+        .fCont .copyright {
+            margin-top:2rem;
+        }
+
+        .fCont .r_box {
+            width:100%;
+            max-width:175px;
+            position:absolute;
+            top:30px;
+            right:0;
+            font-size:0.75rem;
+        }
+
+        .fCont .families {
+            width:100%;
+            padding:5px 7px;
+            margin-bottom:25px;
+            border:1px solid #262626;
+            position: relative;
+            cursor: pointer;
+            text-align: left;
+            -webkit-appearance: menulist-button;
+        }
+        .fCont .families #fmenu {
+            display: none;
+            padding: 0 5px;
+            position: absolute;
+            bottom: 28px;
+            left: -1px;
+            right: 0;
+            background: #fff;
+            border: 1px solid #262626;
+            width: 175px;
+
+        }
+
+        .fCont .families #fmenu li {
+            padding: 7px 0;
+        }
+
+        .fCont .families #fmenu li>a {
+            display:block;
+        }
+
+        .fCont .coupon {
+            text-align:right;
+        }
+        .fCont .coupon span {
+            margin-right:5px;
+        }
+        .fCont .logo {
+            display:inline-block;
+            width:179px;
+        }
+
+        body * {
+            box-sizing:border-box;
+            -webkit-box-sizing:border-box;
+        }
+
+        img {
+            vertical-align:middle;
+        }
+
+        a {
+            color:inherit;
+            text-decoration:none;
+        }
+
+        ul {
+            margin:0;
+            padding:0;
+        }
+
+        p {
+            line-height:150%;
+        }
+
+        img {
+            max-width:100%;
+        }
+
+        table {
+            border-collapse:collapse;
+        }
+
+        em {
+            font-style:normal;
+            font-weight:700;
+        }
+
+        .container.space {
+            padding-left:45px;
+        }
+
+        .clear:after {
+            display:block;
+            clear:both;
+            content:'';
+        }
+
+        .font-eb {
+            font-weight:800;
+        }
+
+        .font-bl {
+            font-weight:900;
+        }
+
+        .font-2 {
+            font-family:'Nanum Myeongjo',sans-serif;
+        }
+
+        .color-1 {
+            color:#071F60;
+        }
+
+        .color-2 {
+            color:#6b4d30;
+        }
+
+        .color-3 {
+            color:#ffe600;
+        }
+
+        .text-center {
+            text-align:center;
+        }
+
+        .to_top {
+            position:fixed;
+            bottom:15px;
+            right:60px;
+            z-index:10;
+        }
+
+        .to_top span {
+            display:inline-block;
+            width:60px;
+            height:60px;
+            cursor:pointer;
+            background:url(img/off.png)no-repeat center;
+        }
+
+        .to_top span:hover {
+            background:url(img/on.png)no-repeat center;
+        }
+
+        @media screen and (max-width:1023px){
+            .to_top span, .to_top span:hover {
+                width:30px;
+                height:30px;
+                background-size:contain;
+            }
+        }
+
+        @media screen and (max-width: 1110px) {
+            .to_top {
+                right:5%;
+            }
+        }
+        @media screen and (max-width:800px){
+            .fCont .r_box {
+                display:none;
+            }
+
+            .fCont .company_info {
+                font-size:1rem;
+            }
+
+            .fCont .company_info li {
+                display:block;
+            }
+
+            .fCont .company_info li:after {
+                display:none;
+            }
+        }
+
+        .sub_visual{min-height:499px;padding:0 10px;text-align:center;background-repeat:no-repeat;background-size:cover;background-position:center;position:relative;}
+        .sub_visual .txt{width:100%;position:absolute;top:148px;left:0;}
+        .sub_visual .txt h1{margin:0;font-size:2.75rem;font-weight:300;}
+        .sub_visual .txt h1:after{display:block;width:40px;height:2px;margin:32px auto;background:#202020;content:'';}
+        .sub_visual .txt p{font-size:1.25rem;font-weight:300;}
+        .sub_visual .page_tab{width:100%;padding:0 10px;font-size:0;position:absolute;bottom:41px;left:0;}
+        .sub_visual .page_tab li{display:inline-block;width:20%;max-width:170px;padding:10px 0;border:1px solid #bfbfbf;border-left:0;font-size:1rem;color:#909090;background:#fff;}
+        .sub_visual .page_tab li:first-child{border-left:1px solid #bfbfbf;}
+        .sub_visual .page_tab li a{display:block;}
+        .sub_visual .page_tab li.on, .sub_visual .page_tab li:hover{color:#000;background:#ffe600;transition:background .3s ease;-webkit-transition:background .3s ease;}
+        .sub_visual.bg-1{background:#666666;}
+        .sub_section{padding:65px 0;}
+        @media screen and (max-width:767px){
+            .sub_visual{min-height:300px;padding:20px 10px;}
+            .sub_visual .txt, .sub_visual .page_tab{position:inherit;top:inherit;bottom:inherit;}
+            .sub_visual.visual-2 .txt{position:absolute;top:50%;transform:translateY(-50%);}
+            .sub_visual .page_tab{margin-top:20px;}
+            .sub_visual .page_tab li{width:95%;max-width:100%;border-left:1px solid #bfbfbf;border-top:0;}
+            .sub_visual .page_tab li:first-child{border-top:1px solid #bfbfbf;}
+        }
+
+        .sub_visual.bg-menu{background-image:url(img/bg-menu.jpg);}
+        .sub_visual.bg-menu2{background-image:url(img/bg-menu2.jpg);}
+        .sub_visual.bg-menu3{background-image:url(img/bg-menu3.jpg);}
+        .sub_visual.bg-menu4{background-image:url(img/bg-menu4.jpg);}
+        .sub_visual.bg-menu5{background-image:url(img/bg-menu5.jpg);}
+        .sub_section .main_tit3{text-align:center;font-size:2.187rem;}
+        .sub_section .main_tit3:after{width:58px;height:3px;display:block;margin:1rem auto 6rem;background:#0e347e;content:'';}
+        .menu_wrap{padding:90px 0 0;}
+        .menu_wrap .container{overflow:hidden;}
+        .menu_wrap .menu_slider{margin-bottom:80px;padding:0 50px;position:relative;}
+        .swiper-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-transition-property: -webkit-transform;
+            transition-property: -webkit-transform;
+            -o-transition-property: transform;
+            transition-property: transform;
+            transition-property: transform,-webkit-transform;
+            -webkit-box-sizing: content-box;
+            box-sizing: content-box
+        }
+
+        .menu_wrap .menu_slider .swiper-slide{text-align:center;position:relative;}
+        .menu_wrap .menu_slider .swiper-slide img{width:245px;}
+        .menu_wrap .menu_slider .swiper-slide .best_tit{margin-top:1rem;font-size:1rem;font-weight:500;}
+        .menu_wrap .menu_slider .swiper-slide .ico{
+            display:inline-block;width:69px;height:69px;line-height:69px;
+            border-radius:100%;
+            font-size:1.062rem;font-weight:700;text-transform:uppercase;
+            position:absolute;top:60px;right:20px;
+        }
+        .menu_wrap .menu_slider .swiper-slide .ico.new{background:#ffe600;color:#0f46ae;}
+        .menu_wrap .menu_slider .swiper-slide .ico.best{background:#0e347e;color:#ffe600;}
+        .menu_wrap .menu_slider .swiper-button-next, .menu_wrap .menu_slider .swiper-button-prev{width:26px;height:43px;margin-top:0;transform:translateY(-50%);}
+        .menu_wrap .menu_slider .swiper-button-next{background-image:url(../images/next-ico.png);}
+        .menu_wrap .menu_slider .swiper-button-prev{background-image:url(../images/prev-ico.png);}
+        .menu_wrap .menu_view{padding:20px 0 50px;border-top:1px solid #e5e5e5;text-align:center;}
+        .menu_wrap .menu_view h2{padding-bottom:20px;font-size:1.5rem;font-weight:500;}
+        .menu_wrap .sns_ico{font-size:0;margin:0 -9px;text-align:center;margin-top:30px;}
+        .menu_wrap .sns_ico li{display:inline-block;margin:0 9px;}
+        .sns_ico img{width:32px;}
+        .menu_list{padding-bottom:97px;}
+        .menu_list>ul>li{float:left;width:25%;padding:20px;border:1px solid #dcdcdc;border-left:1px solid transparent;border-top:1px solid transparent;position:relative;cursor:pointer;}
+        .menu_list>ul>li:nth-child(-n+4){border-top:1px solid #dcdcdc;}
+        .menu_list>ul>li:nth-child(4n+1){border-left:1px solid #dcdcdc;}
+        .menu_list>ul>li:hover{border-color:#0e347e;border-left:1px solid #0e347e;}
+        .menu_list .thumb{}
+        .menu_list .menu_tit{padding:0 10px;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+        .menu_list .hover, .menu_slider .hover{width:100%;height:100%;text-align:left;border:8px solid #fff;padding:30px 22px 9px;background:rgba(255, 230, 0, 0.8);position:absolute;top:0;left:0;display:none;}
+        .menu_list .hover .close, .menu_slider .hover .close{font-size:0;background:transparent;position:absolute;right:11px;top:13px;}
+        .menu_list .hover .close:before, .menu_slider .hover .close:before{content:url(../images/menu-close.png);}
+        .menu_list .hover h3, .menu_slider .hover h3{font-size:1.495rem;color:#000;}
+        .menu_list .hover .menu_tit2, .menu_slider .hover div.menu_tit2{font-weight:700;text-transform:uppercase;line-height:130%;font-size:0.935rem;}
+        .menu_list .hover .menu_tit2 .contain, .menu_slider .hover div.menu_tit2 .contain {
+            text-transform : none;
+            font-weight:400;
+            color:#000;
+            line-height:1;
+            margin-top:5px;
+            font-size:13px;
+            letter-spacing:-0.25px;
+        }
+        .menu_list .hover .menu_tit2:after, .menu_slider .hover .menu_tit2:after{display:block;width:26px;height:2px;margin:5px 0;background:#202020;content:'';}
+        .menu_list .hover .menu_tit2.menu_contain:after, .menu_slider .hover .menu_tit2.menu_contain:after { margin: 10px 0 24px; }
+        .menu_list .hover .txt, .menu_slider .hover p.txt{font-weight:300;font-size:0.875rem;word-break:break-word;}
+        .menu_list .hover .price, .menu_slider .hover .price{width:100%; margin-bottom:5px;}
+        .menu_slider .hover .price{bottom:30px;}
+        .menu_list .hover .price li, .menu_slider .hover .price li{float:left;font-size:1.25rem;font-weight:700;color:#0e347e;text-transform:uppercase;}
+        .menu_list .hover .price li p, .menu_slider .hover .price li p{line-height:120%;}
+        .menu_list .hover .msg, .menu_slider .hover p.msg{font-size:0.562rem;color:#403a02;position:absolute;left:22px;bottom:9px;}
+        .menu_list .hover .ingredient_table_box, .menu_slider .hover .ingredient_table_box {
+            position:absolute; bottom:35px; left:2.5%; width:95%;
+        }
+        .menu_list .hover .ingredient_table, .menu_slider .hover .ingredient_table {
+            font-size: 0;
+            border-top:2px solid #000;
+            border-bottom:2px solid #000;
+            color:#000;
+        }
+        .ingredient_table_box .menu_ingredient_basis {
+            font-size:13px;
+            color:#000;
+            padding-left:5px;
+            padding-bottom:5px;
+            letter-spacing:-0.25px;
+        }
+        .menu_list .hover .ingredient_table li, .menu_slider .hover .ingredient_table li {
+            display:inline-block;
+            width:50%;
+        }
+        .menu_list .hover .ingredient_table li div, .menu_slider .hover .ingredient_table li div {
+            padding: 7px 3px;
+            font-size: 12px;
+            display:inline-block;
+            letter-spacing:-1px;
+        }
+        .menu_list .hover .ingredient_table li div:nth-child(2n), .menu_slider .hover .ingredient_table li div:nth-child(2n) {
+            text-align:right;
+            float:right;
+        }
+        .menu_list .hover .ingredient_table li:nth-child(2n - 1), .menu_slider .hover .ingredient_table li:nth-child(2n - 1) {
+            border-right: 1px solid #555;
+        }
+        .menu_wrap .title_zone h2{padding-bottom:20px;font-size:1.5rem;font-weight:500;}
+        @media screen and (max-width:1023px){
+            .menu_list>ul>li{width:50%;}
+            .menu_list>ul>li:nth-child(-n+4){border-top:1px solid transparent;}
+            .menu_list>ul>li:nth-child(-n+2){border-top:1px solid #dcdcdc;}
+            .menu_list>ul>li:nth-child(2n+1){border-left:1px solid #dcdcdc;}
+            .menu_list>ul>li:nth-child(2n+1):hover, .menu_list>ul>li:nth-child(-n+2):hover{border-color:#0e347e;}
+            .menu_list>ul>li:nth-child(2n+1):hover, .menu_list>ul>li:nth-child(-n+4):hover{border-top:1px solid #0e347e;}
+            #feed_size {width:100%;}
+            .feed_box {padding:0,1rem,0,1.1rem}
+        }
+        @media screen and (max-width:767px){
+            .menu_list .hover, .menu_slider .hover{width:90%;height:auto;padding:2rem 1rem 1rem;position:fixed;top:30%;left:50%;transform:translateX(-50%);border:1px solid #dcdcdc;z-index:10;}
+            .menu_slider .hover{width:100%;position:absolute;}
+            .menu_list .hover .price, .menu_list .hover .msg, .menu_slider .hover .price, .menu_slider .hover .msg{position:initial;}
+            .menu_list .hover .price, .menu_slider .hover .price{padding:1rem 0;}
+            #feed_size {width:100%;height:150px}
+            .feed_box {padding: 0,1rem,0,1rem}
+            .menu_list .hover .ingredient_table_box, .menu_slider .hover .ingredient_table_box {
+                position:relative;
+                left:0;
+                bottom:0;
+                width:100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <header id="header">
+        <div class="header_box">
+            <div class="sub-bg"></div>
+            <div class="container">
+                <ul class="top_box">
+                    <li><a href="#">더본코리아</a></li>
+                    <li class="sns f"><a href="#" target="_blank">facebook</a></li>
+                    <li class="sns i"><a href="#" target="_blank">instagram</a></li>
+                </ul>
+
+                <div class="nav_box">
+                    <a href="index.html" class="logo">
+                        <img src="img/logo.png" alt="빽다방">
+                    </a>
+
+                    <div class="nav-icon"><div></div></div>
+                    <ul class="navbar">
+                        <li class="has-children">
+                            <a href="index.html">빽다방</a>
+
+                            <ul class="sub-menu">
+                                <li><a href="./greeting.html">CEO 인사말</a></li>
+                                <li><a href="#">빽다방 소개</a></li>
+                                <li><a href="#">멤버십 / 앱 소개</a></li>
+                                <li><a href="#">커피 이야기</a></li>
+                                <li><a href="#">교육 이야기</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-children">
+                            <a href="#">메뉴</a>
+                            <ul class="sub-menu">
+                                <li><a href="menu_new.html">신메뉴</a></li>
+                                <li><a href="menu_coffee.html">커피</a></li>
+                                <li><a href="#">음료</a></li>
+                                <li><a href="#">아이스크림/디저트</a></li>
+                                <li><a href="#">빽스치노</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-children">
+                            <a href="#">소식</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">소식</a></li>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">친절 우수매장</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-children">
+                            <a href="#">커뮤니티</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">커피클래스</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-children">
+                            <a href="#">매장안내</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">매장찾기</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-children">
+                            <a href="#">창업안내</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">왜 빽다방인가요</a></li>
+                                <li><a href="#">창업상담 신청</a></li>
+                                <li><a href="#">창업절차 및 조건</a></li>
+                                <li><a href="#">인테리어</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">고객의 소리</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="content-wrap">
+        <div class="sub_visual bg-menu">
+            <div class="txt">
+                <h1>신메뉴</h1>
+                <p>지금 바로 가까운 매장에서 빽다방 신메뉴를 만나 보실 수 있습니다.</p>
+            </div>
+
+            <ul class="page_tab st-2">
+                <li  class="on" ><a href="menu_new.html">신메뉴</a></li>
+                <li ><a href="#">커피</a></li>
+                <li ><a href="#">음료</a></li>
+                <li ><a href="#">아이스크림/디저트</a></li>
+                <li ><a href="#">빽스치노</a></li>
+            </ul>
+        </div>
+
+        <div class="sub_section menu_wrap">
+            <div class="container">
+                <div class="title_zone">
+                    <h2>디저트 신메뉴</h2>
+                </div>
+
+                <h2 class="main_tit3 color-1">신메뉴</h2>
+                <div class="menu_slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/명란소금빵_thumb-450x588.png" alt="">
+                            <p class="best_tit">
+                                명란 소금빵
+                            </p>
+                            <div class="hover">
+                                <button class="close" type="button"></button>
+                                <h3 class="font-bl">명란 소금빵</h3>
+                                <div class="menu_tit2 color-1"> </div>
+                                <p class="txt">짭조름한 명란맛과
+                                    버터의 풍미가 느껴지는 소금빵</p>
+                                <div class="ingredient_table_box"></div>
+                                <p class="msg">(매장 상황에 따라 판매하지 않을 수 있습니다.)</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="img/청양고추소금빵_thumb-450x588.png" alt="">
+                            <p class="best_tit">청양고추 소금빵</p>
+
+                            <div class="hover">
+                                <button class="close" type="button"></button>
+                                <h3 class="font-bl">청양고추 소금빵</h3>
+                                <div class="menu_tit2 color-1 "> </div>
+                                <p class="txt">다진 청양고추와 치즈가 토핑되어
+                                    매콤하고 고소한 버터소금빵</p>
+
+                                <div class="ingredient_table_box">
+                                </div>
+                                <p class="msg">(매장 상황에 따라 판매하지 않을 수 있습니다.)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+
+                </div>
+                <section class="menu_view" style="border-top:1px solid #fff;padding-top:0">
+                    <ul class="sns_ico">
+                        <li><a href="" target="_blank"><img src="img/facebook-ico.png" alt="facebook"></a></li>
+                        <li><a href="" target="_blank"><img src="img/insta-ico.png" alt="instagram"></a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <script>
+            jQuery(document).on("click", ".menu_list>ul>li, .menu_slider .swiper-slide", function() {
+                var is_display = jQuery(this).children(".hover").css("display");
+                if (is_display == "block") {
+                    jQuery(this).children(".hover").stop().fadeOut();
+                    jQuery(this).parent().removeClass('on');
+                } else {
+                    jQuery(".hover").stop().fadeOut();
+                    jQuery(this).children(".hover").stop().fadeToggle();
+                    jQuery(".menu_list>ul>li").removeClass('on');
+                    jQuery(this).parent().addClass('on');
+                }
+                return false;
+            });
+        </script>
+    </div>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="fCont">
+                <a class="logo" href="index.html"><img src="img/flogo.png" alt="더본로고"></a>
+                <div class="company_info">
+                    <ul>
+                        <li>(주)더본코리아</li>
+                        <li>사업자등록번호 211-86-00870</li>
+                        <li>대표이사 백종원</li>
+                    </ul>
+                    <ul>
+                        <li>주소: 서울시 강남구 봉은사로 1길 39 유성빌딩 5~6층</li>
+                        <li>팩스: 02-511-3864</li>
+                    </ul>
+                    <ul>
+                        <li>본사 대표전화: 02-549-3864</li>
+                        <li>가맹상담전화: 02-3447-0410</li>
+                        <li>고객센터: 1544-2360</li>
+                    </ul>
+                    <p class="copyright">COPYRIGHTⓒ 2018 THEBORN KOREA INC. ALL RIGHTS RESERVED</p>
+                </div>
+                <div class="r_box">
+                    <div id="families" class="families">
+                        <span>패밀리사이트 바로가기</span>
+                        <ul id="fmenu">
+                            <li><a href="#" target="_blank">더본코리아</a></li>
+                            <li><a href="#">창업센터</a></li>
+                            <li><a href="#" target="_blank">새마을식당</a></li>
+                            <li><a href="#" target="_blank">한신포차</a></li>
+                            <li><a href="#" target="_blank">역전우동</a></li>
+                            <li><a href="#" target="_blank">백스비어</a></li>
+                            <li><a href="#">롤링파스타</a></li>
+                            <li><a href="#">인생설렁탕</a></li>
+                            <li><a href="#">미정국수</a></li>
+                            <li><a href="#">리춘시장</a></li>
+                            <li><a href="#" target="_blank">원조쌈밥집</a></li>
+                            <li><a href="#">돌배기집</a></li>
+                            <li><a href="#">백철판</a></li>
+                            <li><a href="#">호텔더본</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="to_top">
+                <span></span>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+<script>
+    $(".navbar").hover(
+        function() {
+            $('.sub-bg').addClass('on');
+        },
+        function() {
+            $('.sub-bg').removeClass('on');
+        }
+    );
+
+    //패밀리사이트
+    jQuery('.families').click(function() {
+        jQuery(this).toggleClass("active");
+        jQuery('#fmenu').slideToggle(300);
+    })
+</script>
+</body>
+</html>

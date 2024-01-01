@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
 
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"/>
 	<title>빽다방</title>
 
 	<style>
@@ -846,39 +847,39 @@
 			top: 123px;
 		}
 
-		.in_footer {
+		.fCont {
 			padding:30px 0;
 			text-align:center;
 			color:#262626;
 			position:relative;
 		}
 
-		.in_footer .company_info {
+		.fCont .company_info {
 			padding-top:30px;
 			margin-bottom:0;
 			font-size:0.812rem;
 		}
 
-		.in_footer .company_info li {
+		.fCont .company_info li {
 			display:inline-block;
 			list-style:none;
 			line-height:1.7;
 		}
 
-		.in_footer .company_info li:after {
+		.fCont .company_info li:after {
 			padding:0 14px;
 			content:'l';
 		}
 
-		.in_footer .company_info li:last-child:after {
+		.fCont .company_info li:last-child:after {
 			display:none;
 		}
 
-		.in_footer .copyright {
+		.fCont .copyright {
 			margin-top:2rem;
 		}
 
-		.in_footer .r_box {
+		.fCont .r_box {
 			width:100%;
 			max-width:175px;
 			position:absolute;
@@ -887,7 +888,7 @@
 			font-size:0.75rem;
 		}
 
-		.in_footer .family_site {
+		.fCont .families {
 			width:100%;
 			padding:5px 7px;
 			margin-bottom:25px;
@@ -897,7 +898,7 @@
 			text-align: left;
 			-webkit-appearance: menulist-button;
 		}
-		.in_footer .family_site #fmenu {
+		.fCont .families #fmenu {
 			display: none;
 			padding: 0 5px;
 			position: absolute;
@@ -910,39 +911,39 @@
 
 		}
 
-		.in_footer .family_site #fmenu li {
+		.fCont .families #fmenu li {
 			padding: 7px 0;
 		}
 
-		.in_footer .family_site #fmenu li>a {
+		.fCont .families #fmenu li>a {
 			display:block;
 		}
 
-		.in_footer .coupon {
+		.fCont .coupon {
 			text-align:right;
 		}
-		.in_footer .coupon span {
+		.fCont .coupon span {
 			margin-right:5px;
 		}
-		.in_footer .logo {
+		.fCont .logo {
 			display:inline-block;
 			width:179px;
 		}
 
 		@media screen and (max-width:800px) {
-			.in_footer .r_box {
+			.fCont .r_box {
 				display:none;
 			}
 
-			.in_footer .company_info {
+			.fCont .company_info {
 				font-size:1rem;
 			}
 
-			.in_footer .company_info li {
+			.fCont .company_info li {
 				display:block;
 			}
 
-			.in_footer .company_info li:after {
+			.fCont .company_info li:after {
 				display:none;
 			}
 
@@ -1419,6 +1420,7 @@
 
 							<div class="rWrap sec_hover">
 								<a href="#">
+								<a href="#">
 									<dl>
 										<dt>PAIK’S BRAND<br>STORY</dt>
 										<dd>합리적인 가격으로 만나는 맛있고 든든한 빽다방</dd>
@@ -1524,8 +1526,8 @@
 
 		<footer id="footer">
 			<div class="container">
-				<div class="in_footer">
-					<a class="logo" href="#"><img src="img/flogo.png" alt="더본로고"></a>
+				<div class="fCont">
+					<a class="logo" href="index.html"><img src="img/flogo.png" alt="더본로고"></a>
 					<div class="company_info">
 						<ul>
 							<li>(주)더본코리아</li>
@@ -1544,7 +1546,7 @@
 						<p class="copyright">COPYRIGHTⓒ 2018 THEBORN KOREA INC. ALL RIGHTS RESERVED</p>
 					</div>
 					<div class="r_box">
-						<div id="family_site" class="family_site">
+						<div id="families" class="families">
 							<span>패밀리사이트 바로가기</span>
 							<ul id="fmenu">
 								<li><a href="#" target="_blank">더본코리아</a></li>
@@ -1582,7 +1584,7 @@
 		gtag('config', 'UA-37266520-11');
 
 		//패밀리사이트
-		jQuery('.family_site').click(function() {
+		jQuery('.families').click(function() {
 			jQuery(this).toggleClass("active");
 			jQuery('#fmenu').slideToggle(300);
 		})
