@@ -25,15 +25,15 @@
 <div class="wrap">
 
     <header id="header">
-        <div class="in_header">
+        <div class="header_box">
             <div class="sub-bg"></div>
             <div class="container">
-                <ul class="topbar">
+                <ul class="top_bar">
                     <li><a href="#" target="_blank">더본코리아</a></li>
                     <li class="sns f"><a href="#" target="_blank">facebook</a></li>
                     <li class="sns i"><a href="#" target="_blank">instagram</a></li>
                 </ul>
-                <div class="nav_wrap">
+                <div class="navWrap">
                     <a href="index.html" class="logo"><img src="img/logo.png" alt="빽다방"></a>
                     <a href="index.html" class="logo light"><img src="img/logo-2.png" alt="빽다방"></a>
 
@@ -108,7 +108,7 @@
     </header>
 
     <div class="overlay"></div> <!-- 팝업오버레이 -->
-    <div id="content-wrap">
+    <div id="cWrap">
 
         <div class="sub_visual bg-menu2">
             <div class="txt">
@@ -786,10 +786,10 @@
 
     <footer id="footer">
         <div class="container">
-            <div class="in_footer">
+            <div class="fCont">
                 <a class="logo" href="index.html"><img src="img/flogo.png" alt="더본로고"></a>
                 <a class="logo light" href="index.html"><img src="img/flogo-2.png" alt="더본로고"></a>
-                <div class="company_info">
+                <div class="companyInfo">
                     <ul>
                         <li>(주)더본코리아</li>
                         <li>사업자등록번호 211-86-00870</li>
@@ -807,7 +807,7 @@
                     <p class="copyright">COPYRIGHTⓒ 2018 THEBORN KOREA INC. ALL RIGHTS RESERVED</p>
                 </div>
                 <div class="r_box">
-                    <div id="family_site" class="family_site">
+                    <div id="family_site" class="families">
                         <span>패밀리사이트 바로가기</span>
                         <ul id="fmenu">
                             <li><a href="#" target="_blank">더본코리아</a></li>
@@ -849,7 +849,7 @@
     gtag('config', 'UA-37266520-11');
 
     //패밀리사이트
-    jQuery('.family_site').click(function() {
+    jQuery('.families').click(function() {
         jQuery(this).toggleClass("active");
         jQuery('#fmenu').slideToggle(300);
     })
