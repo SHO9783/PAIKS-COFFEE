@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,15 +16,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
 
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"/>
-    <title>빽다방</title>
+    <title>빽다방  :::  카테고리  :::  커피클래스 글</title>
     <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="css/extend.css">
     <link rel="stylesheet" href="css/paik.css">
 </head>
 <body>
 
-<div id="wrap">
-
+<div class="wrap">
     <header id="header">
         <div class="in_header">
             <div class="sub-bg"></div>
@@ -81,9 +80,9 @@
                             </li>
 
                             <li class="has-children">
-                                <a href="store.html">매장안내</a>
+                                <a href="#">매장안내</a>
                                 <ul class="sub-menu">
-                                    <li><a href="store.html">매장찾기</a></li>
+                                    <li><a href="#">매장찾기</a></li>
                                 </ul>
                             </li>
 
@@ -110,140 +109,82 @@
 
     <div class="overlay"></div> <!-- 팝업오버레이 -->
     <div id="content-wrap">
-        <div id="primary" class="content-area">
-            <main id="main" class="site-main">
-                <div class="entry-content">
-                    <!-- 창업버튼 -->
-                    <ul class="found_btn">
-                        <li><a href="#"><img src="img/presentation_btn.png" /></a></li>
-                        <li><a href="#"><img src="img/counsel_btn.png" /></a></li>
+
+        <div class="sub_visual bg-class" style="background-image: url('/img/bg-class.jpg')">
+            <div class="txt">
+                <h1>커피 클래스</h1>
+                <p>모든 커피 이야기가 시작되는 곳!<br>커피 클래스에 오신 것을 환영합니다.</p>
+            </div>
+            <ul class="page_tab">
+                <li class="on"><a href="coffe_class.html">커피클래스 신청</a></li>
+            </ul>
+        </div>
+
+        <div class="sub_section cmnt_wrap">
+            <div class="container">
+                <section class="class_box">
+                    <ul class="class_li">
+                        <li  onclick="location.href='coffeclass_c1.html';">
+                            <div class="thumb"><img src="/img/커피세미나_04.jpg" alt=""></div>
+                            <div class="desc">
+                                <span class="label">종료</span>
+                                <h2>4월 커피클래스</h2>
+                                <p class="date">2020.04.10 - 2020.04.14</p>
+                            </div>
+                        </li>
+
+                        <li  onclick="location.href='#';">
+                            <div class="thumb"><img src="/img/커피세미나_1.jpg" alt=""></div>
+                            <div class="desc">
+                                <span class="label">종료</span>
+                                <h2>1월 커피클래스</h2>
+                                <p class="date">2020.01.10 - 2020.01.16</p>
+                            </div>
+                        </li>
+
+                        <li  onclick="location.href='#';">
+                            <div class="thumb"><img src="/img/커피세미나_12.jpg" alt=""></div>
+                            <div class="desc">
+                                <span class="label">종료</span>
+                                <h2>12월 커피클래스</h2>
+                                <p class="date">2019.12.06 - 2019.12.12</p>
+                            </div>
+                        </li>
+
+                        <li  onclick="location.href='#';">
+                            <div class="thumb"><img src="/img/커피세미나_11.jpg" alt=""></div>
+                            <div class="desc">
+                                <span class="label">종료</span>
+                                <h2>11월 커피클래스</h2>
+                                <p class="date">2019.11.04 - 2019.11.10</p>
+                            </div>
+                        </li>
+
+                        <li  onclick="location.href='#';">
+                            <div class="thumb"><img src="/img/커피세미나_10.jpg" alt=""></div>
+                            <div class="desc">
+                                <span class="label">종료</span>
+                                <h2>10월 커피클래스</h2>
+                                <p class="date">2019.10.11 - 2019.10.17</p>
+                            </div>
+                        </li>
                     </ul>
-                    <!-- //창업버튼 -->
-                    <!-- 메인비쥬얼 -->
-                    <div class="main_visual_wrap">
-                        <div class="carousel-1 relative con-min-width">
-                            <ul class="owl-carousel owl-theme">
-                                <li class="CarouselContent" style="background-image:url('img/빽다방_원조커피제로슈거_홈페이지-메인_1920x600_확인용-1920x600.jpg');"></li>
-                                <li class="CarouselContent" style="background-image:url('img/빽다방_뱅쇼_홈페이지-메인_1920x600_O_확인용.jpg');"></li>
-                                <li class="CarouselContent" style="background-image:url('img/빽다방_명란청양고추소금빵_홈페이지-메인_1920x600_O_확인용.jpg');"></li>
-                                <li class="CarouselContent" style="background-image:url('img/빽다방_홈페이지_main_크룽지-1920x600.jpg');"></li>
-                                <li class="CarouselContent" style="background-image:url('img/main_멤버십활성화-1.jpg');"></li>
-                            </ul>
-                        </div>
 
-                    </div>
-                    <!-- //메인비쥬얼 -->
+                    <nav class="navigation pagination" role="navigation">
+                        <h2 class="screen-reader-text">글 내비게이션</h2>
+                        <div class="nav-links"><span aria-current='page' class='page-numbers current'>1</span>
+                            <a class='page-numbers' href='#'>2</a>
+                            <a class='page-numbers' href='#'>3</a>
+                            <a class='page-numbers' href='#'>4</a>
+                            <a class='page-numbers' href='#'>5</a>
+                            <a class="next page-numbers" href="#"></a></div>
+                    </nav>
+                </section>
+            </div>
+        </div>
 
-                    <!-- 메인컨텐츠 -->
-                    <div class="main_section">
-                        <section class="main_sec01 sec_hover">
-                            <div class="left_wrap sec_hover">
-                                <a href="#">
-                                    <dl>
-                                        <dt>PAIK’S COFFEE<br>STORY</dt>
-                                        <dd>균형잡힌 바디감으로 긴 여운을 남기는 빽다방 커피를 만나보세요.</dd>
-                                    </dl>
-                                    <a class="view_btn" href="#"><span>커피 이야기 보러가기</span></a>
-                                </a>
-                            </div>
-                            <div class="right_wrap sec_hover">
-                                <a href="#">
-                                    <dl>
-                                        <dt>PAIK’S BRAND<br>STORY</dt>
-                                        <dd>합리적인 가격으로 만나는 맛있고 든든한 빽다방</dd>
-                                    </dl>
-                                    <a class="view_btn" href="#"><span>빽다방 소개 보러가기</span></a>
-                                </a>
-                            </div>
-                        </section>
-                        <section class="main_sec02 sec_hover">
-                            <a href="#">
-                                <dl class="main_tt">
-                                    <dt>FRESH<br>COFFEE</dt>
-                                    <dd>신선한 뉴크롭 원두를 사용하여<br>추출한 커피메뉴!</dd>
-                                </dl>
-                                <img class="pc" src="img/main_sec2.jpg" alt="">
-                                <img class="mo" src="img/mmain_sec2.jpg" alt="">
-                            </a>
-                            <a class="view_btn  " href="#"><span>커피 메뉴 보러가기</span></a>
-                        </section>
-                        <section class="main_sec03">
-                            <div class="left_wrap sec_hover">
-                                <a href="#">
-                                    <dl class="main_tt">
-                                        <dt>VARIOUS<br>BEVERAGE</dt>
-                                        <dd>에이드, 티, 주스 등 취향대로<br>골라 먹는 즐거움!</dd>
-                                    </dl>
-                                    <img class="pc" src="img/main_sec3.jpg" alt="">
-                                    <img class="mo" src="img/mmain_sec3.jpg" alt="">
-                                </a>
-                                <a class="view_btn" href="/menu/menu_drink"><span>음료 메뉴 보러가기</span></a>
-                            </div>
-                            <div class="right_wrap sec_hover">
-                                <a href="#">
-                                    <dl class="main_tt">
-                                        <dt>SWEET<br>PAIK'S CCINO</dt>
-                                        <dd>달콤 시원한 빽다방<br>시그니처 메뉴!</dd>
-                                    </dl>
-                                    <img class="pc" src="img/main_sec4.jpg" alt="">
-                                    <img class="mo" src="img/mmain_sec4.jpg" alt="">
-                                </a>
-                                <a class="view_btn" href="#"><span>빽스치노 메뉴 보러가기</span></a>
-                            </div>
-                        </section>
-                        <section class="main_sec04">
-                            <div class="right_wrap sec_hover">
-                                <a href="#">
-                                    <dl class="main_tt">
-                                        <dt>TASTY<br>ICE CREAM /<br>DESSERT</dt>
-                                        <dd>달콤한 아이스크림부터<br>든든한 브레드까지!</dd>
-                                    </dl>
-                                    <img class="pc" src="img/main_sec5.jpg" alt="">
-                                    <img class="mo" src="img/mmain_sec5.jpg" alt="">
-                                </a>
-                                <a class="view_btn" href="#"><span>아이스크림/디저트 메뉴 보러가기</span></a>
-                            </div>
-                            <div class="left_wrap">
-                                <div class="store_bn">
-                                    <dl>
-                                        <dt>STORE</dt>
-                                        <dd>원하시는 지역의 매장을 검색해보세요!</dd>
-                                    </dl>
-                                    <div class="store_search">
-                                        <form action="#" method="get">
-                                            <input type="text" name="search_string" placeholder="Find a store in your area!">
-                                            <button class="ok" type="submit" name=""><img src="img/search-ico.png" alt="검색"></button>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="franchise_bn">
-                                    <a href="#">
-                                        <dl>
-                                            <dt>FRANCHISE</dt>
-                                            <dd>빽다방 창업안내를 도와드리겠습니다.</dd>
-                                        </dl>
-                                    </a>
-                                    <a class="view_btn" href="#"><span>창업안내 보러가기</span></a>
-                                </div>
-                            </div>
-                        </section>
-                        <div class="main_sns">
-                            <dl class="sns_tt">
-                                <dt>PAIK’S COFFEE SNS</dt>
-                                <dd><span>#빽다방</span><span>#빽다방신메뉴</span><span>#빽다방이벤트</span></dd>
-                            </dl>
 
-                            <ul class="sns_icon">
-                                <li><a href="#" target="_blank"><img src="img/facebook-ico.png" alt="facebook"></a></li>
-                                <li><a href="#" target="_blank"><img src="img/insta-ico.png" alt="instagram"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div><!-- .entry-content -->
-            </main><!-- .site-main -->
-        </div><!-- .content-area -->
-
-    </div> <!-- END #content-wrap -->
+    </div>
 
     <footer id="footer">
         <div class="container">
@@ -297,12 +238,11 @@
             <!-- //TOP버튼 -->
         </div>
     </footer> <!-- END footer -->
-
-</div> <!-- END #wrap -->
+</div>
 
 <script src="/js/js.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37266520-11"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -343,7 +283,6 @@
         );
     })
 </script>
-
 
 </body>
 </html>
