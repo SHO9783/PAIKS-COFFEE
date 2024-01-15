@@ -1,0 +1,22 @@
+[
+  {"id":1,
+  "name": "오 수현"
+  "age": 24
+  "personalColor": "white"
+  },
+  {"id":2,
+  "name": "정 지환"
+  "age": 26
+  "personalColor": "gray"
+  },
+  {"id":3,
+  "name": "박 검지"
+  "age": 27
+  "personalColor": "black"
+  },
+  {"id":4,
+  "name": "권 광호"
+  "age": 30
+  "personalColor": "brown"
+  }
+]
