@@ -12,10 +12,10 @@ jQuery(document).on("click","header .navbar.active .menu-item-has-children>a",fu
 });
 
 
-jQuery(".in_header .nav .navbar>.menu-item-has-children").on("mouseenter",function(){
+jQuery(".header_box .nav .navbar>.menu-item-has-children").on("mouseenter",function(){
     jQuery(".sub-bg").addClass("on");
 });
-jQuery(".in_header .nav .navbar>.menu-item-has-children").on("mouseleave",function(){
+jQuery(".header_box .nav .navbar>.menu-item-has-children").on("mouseleave",function(){
     jQuery(".sub-bg").removeClass("on");
 });
 
