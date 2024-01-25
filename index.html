@@ -17,13 +17,17 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="resources/img/favicon.png"/>
     <title>빽다방</title>
-    <link rel="stylesheet" href="css/css.css">
-    <link rel="stylesheet" href="css/extend.css">
-    <link rel="stylesheet" href="css/paik.css">
+    <link rel="stylesheet" href="resources/css/css.css"> <!--css 불러오기-->
 
     <style>
         .items-disabled {
             cursor: not-allowed;
+        }
+
+        @media screen and (max-width:1200px) {
+            .mainWrapper {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -306,24 +310,9 @@
 
 </div> <!-- END #wrap -->
 
-<script src="/js/js.js"></script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-37266520-11"></script>
+<script src="/js/js.js"></script> <!--js 불러오기-->
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-37266520-11');
-
-    //패밀리사이트
-    jQuery('.families').click(function() {
-        jQuery(this).toggleClass("active");
-        jQuery('#fmenu').slideToggle(300);
-    })
-
-    $(function() {
+    $(function() {  //캐로셀 작동하는 script
         $('.carousel-1 > .owl-carousel').owlCarousel({
             autoplay:true, // 오토 플레이
             autoplayTimeout:2000, // 오토 플레이 시에 다음 슬라이드로 넘어가는 주기, 2초
@@ -339,7 +328,7 @@
             }
         });
 
-        $(".navbar").hover(
+        $(".navbar").hover( //네브 작동 script
             function() {
                 $('.sub-bg').addClass('on');
             },
