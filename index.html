@@ -15,11 +15,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
 
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="resources/img/favicon.png"/>
     <title>빽다방</title>
     <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="css/extend.css">
     <link rel="stylesheet" href="css/paik.css">
+
+    <style>
+        .items-disabled {
+            cursor: not-allowed;
+        }
+    </style>
 </head>
 <body>
 
@@ -30,13 +36,13 @@
             <div class="sub-bg"></div>
             <div class="container">
                 <ul class="top_bar">
-                    <li><a href="#" target="_blank">더본코리아</a></li>
-                    <li class="sns f"><a href="#" target="_blank">facebook</a></li>
-                    <li class="sns i"><a href="#" target="_blank">instagram</a></li>
+                    <li><a class="items-disabled" href="#" target="_blank">더본코리아</a></li>
+                    <li class="sns f"><a class="items-disabled" href="#" target="_blank" style="content:url(../img/topbar1.jpg);">facebook</a></li>
+                    <li class="sns i"><a class="items-disabled" href="#" target="_blank" style="content:url(../img/topbar2.jpg);">instagram</a></li>
                 </ul>
                 <div class="navWrap">
-                    <a href="index.html" class="logo"><img src="img/logo.png" alt="빽다방"></a>
-                    <a href="index.html" class="logo light"><img src="img/logo-2.png" alt="빽다방"></a>
+                    <a href="index.html" class="logo"><img src="resources/img/logo.png" alt="빽다방"></a>
+                    <a href="index.html" class="logo light"><img src="resources/img/logo-2.png" alt="빽다방"></a>
 
                     <div class="nav">
                         <div class="nav-icon"><div></div></div>
@@ -46,10 +52,10 @@
 
                                 <ul class="sub-menu">
                                     <li><a href="greeting.html">CEO 인사말</a></li>
-                                    <li><a href="#">빽다방 소개</a></li>
-                                    <li><a href="#">멤버십 / 앱 소개</a></li>
-                                    <li><a href="#">커피 이야</a></li>
-                                    <li><a href="#">교육 이야기</a></li>
+                                    <li><a class="items-disabled" href="#">빽다방 소개</a></li>
+                                    <li><a class="items-disabled" href="#">멤버십 / 앱 소개</a></li>
+                                    <li><a class="items-disabled" href="#">커피 이야기</a></li>
+                                    <li><a class="items-disabled" href="#">교육 이야기</a></li>
                                 </ul>
                             </li>
 
@@ -58,9 +64,9 @@
                                 <ul class="sub-menu">
                                     <li><a href="menu_new.html">신메뉴</a></li>
                                     <li><a href="menu_coffee.html">커피</a></li>
-                                    <li><a href="#">음료</a></li>
-                                    <li><a href="#">아이스크림/디저트</a></li>
-                                    <li><a href="#">빽스치노</a></li>
+                                    <li><a class="items-disabled" href="#">음료</a></li>
+                                    <li><a class="items-disabled" href="#">아이스크림/디저트</a></li>
+                                    <li><a class="items-disabled" href="#">빽스치노</a></li>
                                 </ul>
                             </li>
 
@@ -69,14 +75,14 @@
                                 <ul class="sub-menu">
                                     <li><a href="news_news.html">소식</a></li>
                                     <li><a href="news_event.html">이벤트</a></li>
-                                    <li><a href="#">친절 우수매장</a></li>
+                                    <li><a class="items-disabled" href="#">친절 우수매장</a></li>
                                 </ul>
                             </li>
 
                             <li class="has-children">
-                                <a href="coffe_class.html">커뮤니티</a>
+                                <a href="coffee_class.html">커뮤니티</a>
                                 <ul class="sub-menu">
-                                    <li><a href="coffe_class.html">커피클래스</a></li>
+                                    <li><a href="coffee_class.html">커피클래스</a></li>
                                 </ul>
                             </li>
 
@@ -88,17 +94,17 @@
                             </li>
 
                             <li class="has-children">
-                                <a href="#">창업안내</a>
+                                <a href="prebrand_detail_back.html">창업안내</a>
                                 <ul class="sub-menu">
-                                    <li><a href="#">왜 빽다방인가요</a></li>
-                                    <li><a href="#">창업상담 신청</a></li>
-                                    <li><a href="#">창업절차 및 조건</a></li>
-                                    <li><a href="#">인테리어</a></li>
+                                    <li><a href="prebrand_detail_back.html">왜 빽다방인가요</a></li>
+                                    <li><a class="items-disabled" href="#">창업상담 신청</a></li>
+                                    <li><a class="items-disabled" href="#">창업절차 및 조건</a></li>
+                                    <li><a class="items-disabled" href="#">인테리어</a></li>
                                 </ul>
                             </li>
 
                             <li>
-                                <a href="#">고객의 소리</a>
+                                <a class="items-disabled" href="#">고객의 소리</a>
                             </li>
 
                         </ul>
@@ -115,19 +121,19 @@
                 <div class="entry">
                     <!-- 창업버튼 -->
                     <ul class="foundBtn">
-                        <li><a href="#"><img src="img/presentation_btn.png" /></a></li>
-                        <li><a href="#"><img src="img/counsel_btn.png" /></a></li>
+                        <li><a class="items-disabled" href="#"><img src="resources/img/presentation_btn.png" /></a></li>
+                        <li><a class="items-disabled" href="#"><img src="resources/img/counsel_btn.png" /></a></li>
                     </ul>
                     <!-- //창업버튼 -->
                     <!-- 메인비쥬얼 -->
                     <div class="mainWrapper">
                         <div class="carousel-1 relative con-min-width">
                             <ul class="owl-carousel owl-theme">
-                                <li class="CarouselContent" style="background-image:url('img/빽다방_원조커피제로슈거_홈페이지-메인_1920x600_확인용-1920x600.jpg');"></li>
-                                <li class="CarouselContent" style="background-image:url('img/빽다방_뱅쇼_홈페이지-메인_1920x600_O_확인용.jpg');"></li>
-                                <li class="CarouselContent" style="background-image:url('img/빽다방_명란청양고추소금빵_홈페이지-메인_1920x600_O_확인용.jpg');"></li>
-                                <li class="CarouselContent" style="background-image:url('img/빽다방_홈페이지_main_크룽지-1920x600.jpg');"></li>
-                                <li class="CarouselContent" style="background-image:url('img/main_멤버십활성화-1.jpg');"></li>
+                                <li class="CarouselContent items-disabled" style="background-image:url('resources/img/빽다방_원조커피제로슈거_홈페이지-메인_1920x600_확인용-1920x600.jpg');"></li>
+                                <li class="CarouselContent items-disabled" style="background-image:url('resources/img/빽다방_뱅쇼_홈페이지-메인_1920x600_O_확인용.jpg');"></li>
+                                <li class="CarouselContent items-disabled" style="background-image:url('resources/img/빽다방_명란청양고추소금빵_홈페이지-메인_1920x600_O_확인용.jpg');"></li>
+                                <li class="CarouselContent items-disabled" style="background-image:url('resources/img/빽다방_홈페이지_main_크룽지-1920x600.jpg');"></li>
+                                <li class="CarouselContent items-disabled" style="background-image:url('resources/img/main_멤버십활성화-1.jpg');"></li>
                             </ul>
                         </div>
 
@@ -138,70 +144,70 @@
                     <div class="mianSect">
                         <section class="main_sec01 sectionHover">
                             <div class="lWrap sectionHover">
-                                <a href="#">
+                                <a class="items-disabled" href="#">
                                     <dl>
                                         <dt>PAIK’S COFFEE<br>STORY</dt>
                                         <dd>균형잡힌 바디감으로 긴 여운을 남기는 빽다방 커피를 만나보세요.</dd>
                                     </dl>
-                                    <a class="viewBtn" href="#"><span>커피 이야기 보러가기</span></a>
+                                    <a class="viewBtn items-disabled" href="#"><span>커피 이야기 보러가기</span></a>
                                 </a>
                             </div>
                             <div class="rWrap sectionHover">
-                                <a href="#">
+                                <a class="items-disabled" href="#">
                                     <dl>
                                         <dt>PAIK’S BRAND<br>STORY</dt>
                                         <dd>합리적인 가격으로 만나는 맛있고 든든한 빽다방</dd>
                                     </dl>
-                                    <a class="viewBtn" href="#"><span>빽다방 소개 보러가기</span></a>
+                                    <a class="viewBtn items-disabled" href="#"><span>빽다방 소개 보러가기</span></a>
                                 </a>
                             </div>
                         </section>
                         <section class="main_sec02 sectionHover">
-                            <a href="#">
+                            <a class="items-disabled" href="#">
                                 <dl class="mainTitle">
                                     <dt>FRESH<br>COFFEE</dt>
                                     <dd>신선한 뉴크롭 원두를 사용하여<br>추출한 커피메뉴!</dd>
                                 </dl>
-                                <img class="pc" src="img/main_sec2.jpg" alt="">
-                                <img class="mo" src="img/mmain_sec2.jpg" alt="">
+                                <img class="pc" src="resources/img/main_sec2.jpg" alt="">
+                                <img class="mo" src="resources/img/mmain_sec2.jpg" alt="">
                             </a>
-                            <a class="viewBtn  " href="#"><span>커피 메뉴 보러가기</span></a>
+                            <a class="viewBtn  items-disabled" href="#"><span>커피 메뉴 보러가기</span></a>
                         </section>
                         <section class="main_sec03">
                             <div class="lWrap sectionHover">
-                                <a href="#">
+                                <a class="items-disabled" href="#">
                                     <dl class="mainTitle">
                                         <dt>VARIOUS<br>BEVERAGE</dt>
                                         <dd>에이드, 티, 주스 등 취향대로<br>골라 먹는 즐거움!</dd>
                                     </dl>
-                                    <img class="pc" src="img/main_sec3.jpg" alt="">
-                                    <img class="mo" src="img/mmain_sec3.jpg" alt="">
+                                    <img class="pc" src="resources/img/main_sec3.jpg" alt="">
+                                    <img class="mo" src="resources/img/mmain_sec3.jpg" alt="">
                                 </a>
-                                <a class="viewBtn" href="/menu/menu_drink"><span>음료 메뉴 보러가기</span></a>
+                                <a class="viewBtn items-disabled" href="/menu/menu_drink"><span>음료 메뉴 보러가기</span></a>
                             </div>
                             <div class="rWrap sectionHover">
-                                <a href="#">
+                                <a class="items-disabled" href="#">
                                     <dl class="mainTitle">
                                         <dt>SWEET<br>PAIK'S CCINO</dt>
                                         <dd>달콤 시원한 빽다방<br>시그니처 메뉴!</dd>
                                     </dl>
-                                    <img class="pc" src="img/main_sec4.jpg" alt="">
-                                    <img class="mo" src="img/mmain_sec4.jpg" alt="">
+                                    <img class="pc" src="resources/img/main_sec4.jpg" alt="">
+                                    <img class="mo" src="resources/img/mmain_sec4.jpg" alt="">
                                 </a>
-                                <a class="viewBtn" href="#"><span>빽스치노 메뉴 보러가기</span></a>
+                                <a class="viewBtn items-disabled" href="#"><span>빽스치노 메뉴 보러가기</span></a>
                             </div>
                         </section>
                         <section class="main_sec04">
                             <div class="rWrap sectionHover">
-                                <a href="#">
+                                <a class="items-disabled" href="#">
                                     <dl class="mainTitle">
                                         <dt>TASTY<br>ICE CREAM /<br>DESSERT</dt>
                                         <dd>달콤한 아이스크림부터<br>든든한 브레드까지!</dd>
                                     </dl>
-                                    <img class="pc" src="img/main_sec5.jpg" alt="">
-                                    <img class="mo" src="img/mmain_sec5.jpg" alt="">
+                                    <img class="pc" src="resources/img/main_sec5.jpg" alt="">
+                                    <img class="mo" src="resources/img/mmain_sec5.jpg" alt="">
                                 </a>
-                                <a class="viewBtn" href="#"><span>아이스크림/디저트 메뉴 보러가기</span></a>
+                                <a class="viewBtn items-disabled" href="#"><span>아이스크림/디저트 메뉴 보러가기</span></a>
                             </div>
                             <div class="lWrap">
                                 <div class="storeBanner">
@@ -212,18 +218,18 @@
                                     <div class="stroreSearch">
                                         <form action="#" method="get">
                                             <input type="text" name="search_string" placeholder="Find a store in your area!">
-                                            <button class="ok" type="submit" name=""><img src="img/search-ico.png" alt="검색"></button>
+                                            <button class="ok" disabled type="submit" name=""><img src="resources/img/search-ico.png" alt="검색"></button>
                                         </form>
                                     </div>
                                 </div>
                                 <div class="franchise_bn">
-                                    <a href="#">
+                                    <a class="items-disabled" href="#">
                                         <dl>
                                             <dt>FRANCHISE</dt>
                                             <dd>빽다방 창업안내를 도와드리겠습니다.</dd>
                                         </dl>
                                     </a>
-                                    <a class="viewBtn" href="#"><span>창업안내 보러가기</span></a>
+                                    <a class="viewBtn items-disabled" href="#"><span>창업안내 보러가기</span></a>
                                 </div>
                             </div>
                         </section>
@@ -234,8 +240,8 @@
                             </dl>
 
                             <ul class="sns_icon">
-                                <li><a href="#" target="_blank"><img src="img/facebook-ico.png" alt="facebook"></a></li>
-                                <li><a href="#" target="_blank"><img src="img/insta-ico.png" alt="instagram"></a></li>
+                                <li><a class="items-disabled" href="#" target="_blank"><img src="resources/img/facebook-ico.png" alt="facebook"></a></li>
+                                <li><a class="items-disabled" href="#" target="_blank"><img src="resources/img/insta-ico.png" alt="instagram"></a></li>
                             </ul>
                         </div>
                     </div>
@@ -248,8 +254,8 @@
     <footer id="footer">
         <div class="container">
             <div class="fCont">
-                <a class="logo" href="index.html"><img src="img/flogo.png" alt="더본로고"></a>
-                <a class="logo light" href="index.html"><img src="img/flogo-2.png" alt="더본로고"></a>
+                <a class="logo" href="index.html"><img src="resources/img/flogo.png" alt="더본로고"></a>
+                <a class="logo light" href="index.html"><img src="resources/img/flogo-2.png" alt="더본로고"></a>
                 <div class="companyInfo">
                     <ul>
                         <li>(주)더본코리아</li>
@@ -271,20 +277,20 @@
                     <div id="families" class="families">
                         <span>패밀리사이트 바로가기</span>
                         <ul id="fmenu">
-                            <li><a href="#" target="_blank">더본코리아</a></li>
-                            <li><a href="#">창업센터</a></li>
-                            <li><a href="#" target="_blank">새마을식당</a></li>
-                            <li><a href="#" target="_blank">한신포차</a></li>
-                            <li><a href="#" target="_blank">역전우동</a></li>
-                            <li><a href="#" target="_blank">백스비어</a></li>
-                            <li><a href="#">롤링파스타</a></li>
-                            <li><a href="#">인생설렁탕</a></li>
-                            <li><a href="#">미정국수</a></li>
-                            <li><a href="#">리춘시장</a></li>
-                            <li><a href="#" target="_blank">원조쌈밥집</a></li>
-                            <li><a href="#">돌배기집</a></li>
-                            <li><a href="#">백철판</a></li>
-                            <li><a href="#">호텔더본</a></li>
+                            <li><a class="items-disabled" href="#" target="_blank">더본코리아</a></li>
+                            <li><a class="items-disabled" href="#">창업센터</a></li>
+                            <li><a class="items-disabled" href="#" target="_blank">새마을식당</a></li>
+                            <li><a class="items-disabled" href="#" target="_blank">한신포차</a></li>
+                            <li><a class="items-disabled" href="#" target="_blank">역전우동</a></li>
+                            <li><a class="items-disabled" href="#" target="_blank">백스비어</a></li>
+                            <li><a class="items-disabled" href="#">롤링파스타</a></li>
+                            <li><a class="items-disabled" href="#">인생설렁탕</a></li>
+                            <li><a class="items-disabled" href="#">미정국수</a></li>
+                            <li><a class="items-disabled" href="#">리춘시장</a></li>
+                            <li><a class="items-disabled" href="#" target="_blank">원조쌈밥집</a></li>
+                            <li><a class="items-disabled" href="#">돌배기집</a></li>
+                            <li><a class="items-disabled" href="#">백철판</a></li>
+                            <li><a class="items-disabled" href="#">호텔더본</a></li>
                         </ul>
                     </div>
                 </div>

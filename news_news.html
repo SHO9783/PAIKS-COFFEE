@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,10 +14,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
 
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="resources/img/favicon.png"/>
     <title>빽다방  :::  소식 관리</title>
-    <link rel="stylesheet" href="css/css.css">
-    <link rel="stylesheet" href="css/extend.css">
+    <link rel="stylesheet" href="resources/css/css.css">
+    <link rel="stylesheet" href="resources/css/extend.css">
+
+    <style>
+        .items-disabled {
+            cursor: not-allowed;
+        }
+    </style>
 </head>
 <body>
 
@@ -28,13 +33,13 @@
             <div class="sub-bg"></div>
             <div class="container">
                 <ul class="top_bar">
-                    <li><a href="#" target="_blank">더본코리아</a></li>
-                    <li class="sns f"><a href="#" target="_blank">facebook</a></li>
-                    <li class="sns i"><a href="#" target="_blank">instagram</a></li>
+                    <li><a class="items-disabled" href="#" target="_blank">더본코리아</a></li>
+                    <li class="sns f"><a class="items-disabled" href="#" target="_blank">facebook</a></li>
+                    <li class="sns i"><a class="items-disabled" href="#" target="_blank">instagram</a></li>
                 </ul>
                 <div class="navWrap">
-                    <a href="index.html" class="logo"><img src="img/logo.png" alt="빽다방"></a>
-                    <a href="index.html" class="logo light"><img src="img/logo-2.png" alt="빽다방"></a>
+                    <a href="index.html" class="logo"><img src="resources/img/logo.png" alt="빽다방"></a>
+                    <a href="index.html" class="logo light"><img src="resources/img/logo-2.png" alt="빽다방"></a>
 
                     <div class="nav">
                         <div class="nav-icon"><div></div></div>
@@ -44,10 +49,10 @@
 
                                 <ul class="sub-menu">
                                     <li><a href="greeting.html">CEO 인사말</a></li>
-                                    <li><a href="#">빽다방 소개</a></li>
-                                    <li><a href="#">멤버십 / 앱 소개</a></li>
-                                    <li><a href="#">커피 이야</a></li>
-                                    <li><a href="#">교육 이야기</a></li>
+                                    <li><a class="items-disabled" href="#">빽다방 소개</a></li>
+                                    <li><a class="items-disabled" href="#">멤버십 / 앱 소개</a></li>
+                                    <li><a class="items-disabled" href="#">커피 이야</a></li>
+                                    <li><a class="items-disabled" href="#">교육 이야기</a></li>
                                 </ul>
                             </li>
 
@@ -56,47 +61,47 @@
                                 <ul class="sub-menu">
                                     <li><a href="menu_new.html">신메뉴</a></li>
                                     <li><a href="menu_coffee.html">커피</a></li>
-                                    <li><a href="#">음료</a></li>
-                                    <li><a href="#">아이스크림/디저트</a></li>
-                                    <li><a href="#">빽스치노</a></li>
+                                    <li><a class="items-disabled" href="#">음료</a></li>
+                                    <li><a class="items-disabled" href="#">아이스크림/디저트</a></li>
+                                    <li><a class="items-disabled" href="#">빽스치노</a></li>
                                 </ul>
                             </li>
 
                             <li class="has-children">
                                 <a href="news.html">소식</a>
                                 <ul class="sub-menu">
-                                    <li><a href="news_news.html">소식</a></li>
+                                    <li><a href="news.html">소식</a></li>
                                     <li><a href="news_event.html">이벤트</a></li>
-                                    <li><a href="#">친절 우수매장</a></li>
+                                    <li><a class="items-disabled" href="#">친절 우수매장</a></li>
                                 </ul>
                             </li>
 
                             <li class="has-children">
-                                <a href="coffe_class.html">커뮤니티</a>
+                                <a href="coffee_class.html">커뮤니티</a>
                                 <ul class="sub-menu">
-                                    <li><a href="coffe_class.html">커피클래스</a></li>
+                                    <li><a href="coffee_class.html">커피클래스</a></li>
                                 </ul>
                             </li>
 
                             <li class="has-children">
-                                <a href="#">매장안내</a>
+                                <a href="store.html">매장안내</a>
                                 <ul class="sub-menu">
-                                    <li><a href="#">매장찾기</a></li>
+                                    <li><a href="store.html">매장찾기</a></li>
                                 </ul>
                             </li>
 
                             <li class="has-children">
-                                <a href="#">창업안내</a>
+                                <a href="prebrand_detail_back.html">창업안내</a>
                                 <ul class="sub-menu">
-                                    <li><a href="#">왜 빽다방인가요</a></li>
-                                    <li><a href="#">창업상담 신청</a></li>
-                                    <li><a href="#">창업절차 및 조건</a></li>
-                                    <li><a href="#">인테리어</a></li>
+                                    <li><a href="prebrand_detail_back.html">왜 빽다방인가요</a></li>
+                                    <li><a class="items-disabled" href="#">창업상담 신청</a></li>
+                                    <li><a class="items-disabled" href="#">창업절차 및 조건</a></li>
+                                    <li><a class="items-disabled" href="#">인테리어</a></li>
                                 </ul>
                             </li>
 
                             <li>
-                                <a href="#">고객의 소리</a>
+                                <a class="items-disabled" href="#">고객의 소리</a>
                             </li>
 
                         </ul>
@@ -119,8 +124,8 @@
                         <li ><a href="news.html">전체보기</a></li>
                         <li class="on" ><a href="news_news.html">소식</a></li>
                         <li ><a href="news_event.html">이벤트</a></li>
-                        <li ><a href="#">친절우수매장</a></li>
-                        <li ><a href="#">찾아가는 빽다방</a></li>
+                        <li ><a class="items-disabled" href="#">친절우수매장</a></li>
+                        <li ><a class="items-disabled" href="#">찾아가는 빽다방</a></li>
                     </ul>
                 </div>
 
@@ -154,56 +159,56 @@
                                     <td class="date">2023-12-21</td>
                                     <td class="view">3445</td>
                                 </tr>
-                                <tr>
+                                <tr class="items-disabled">
                                     <td class="num">139</td>
                                     <td class="subject">소식</td>
                                     <td class="tit"><a href="#">추운 겨울, 몸을 따뜻하게 녹여줄 ‘뱅쇼’</a></td>
                                     <td class="date">2023-11-28</td>
                                     <td class="view">1118</td>
                                 </tr>
-                                <tr>
+                                <tr class="items-disabled">
                                     <td class="num">138</td>
                                     <td class="subject">소식</td>
                                     <td class="tit"><a href="#">짭짤한 황치즈 머핀에 달콤한 크럼블을 올린 단짠 디저트 ‘황치즈 크럼블 머핀’</a></td>
                                     <td class="date">2023-09-20</td>
                                     <td class="view">1076</td>
                                 </tr>
-                                <tr>
+                                <tr class="items-disabled">
                                     <td class="num">137</td>
                                     <td class="subject">소식</td>
                                     <td class="tit"><a href="#">꾸준히 사랑받는 빽다방 고구마, 꿀밤 음료 3종 시즌백</a></td>
                                     <td class="date">2023-09-20</td>
                                     <td class="view">933</td>
                                 </tr>
-                                <tr>
+                                <tr class="items-disabled">
                                     <td class="num">136</td>
                                     <td class="subject">소식</td>
                                     <td class="tit"><a href="#">빽다방, 엑소 정규7집 발매 기념 한정판 음료 ‘크림소다’ 출시</a></td>
                                     <td class="date">2023-08-01</td>
                                     <td class="view">3064</td>
                                 </tr>
-                                <tr>
+                                <tr class="items-disabled">
                                     <td class="num">135</td>
                                     <td class="subject">소식</td>
                                     <td class="tit"><a href="#">빽다방 X 키르시 블렌딩 콜라보 음료 2종 출시</a></td>
                                     <td class="date">2023-07-20</td>
                                     <td class="view">1852</td>
                                 </tr>
-                                <tr>
+                                <tr class="items-disabled">
                                     <td class="num">134</td>
                                     <td class="subject">소식</td>
                                     <td class="tit"><a href="#">품질 좋은 과일이 듬뿍 들어간 과일음료 3종</a></td>
                                     <td class="date">2023-06-28</td>
                                     <td class="view">1208</td>
                                 </tr>
-                                <tr>
+                                <tr class="items-disabled">
                                     <td class="num">133</td>
                                     <td class="subject">찾아가는 빽다방</td>
                                     <td class="tit"><a href="#">빽다방 커피트럭이 세종대를 찾아갔어요!</a></td>
                                     <td class="date">2023-06-21</td>
                                     <td class="view">1184</td>
                                 </tr>
-                                <tr>
+                                <tr class="items-disabled">
                                     <td class="num">132</td>
                                     <td class="subject">소식</td>
                                     <td class="tit"><a href="#">빽다방 X 디아블로 IV 콜라보 음료, ‘디아블로 에너지드링크’ 출시</a></td>
@@ -216,12 +221,12 @@
                             <nav class="navigation pagination" role="navigation">
                                 <h2 class="screen-reader-text">글 내비게이션</h2>
                                 <div class="nav-links"><span aria-current='page' class='page-numbers current'>1</span>
-                                    <a class='page-numbers' href=#>2</a>
-                                    <a class='page-numbers' href=#>3</a>
-                                    <a class='page-numbers' href=#>4</a>
+                                    <a class='page-numbers items-disabled' href=#>2</a>
+                                    <a class='page-numbers items-disabled' href=#>3</a>
+                                    <a class='page-numbers items-disabled' href=#>4</a>
                                     <span class="page-numbers dots">&hellip;</span>
-                                    <a class='page-numbers' href=#>17</a>
-                                    <a class="next page-numbers" href=#></a></div>
+                                    <a class='page-numbers items-disabled' href=#>17</a>
+                                    <a class="next page-numbers items-disabled" href=#></a></div>
                             </nav>
                         </div>
                     </div>
@@ -233,8 +238,8 @@
     <footer id="footer">
         <div class="container">
             <div class="fCont">
-                <a class="logo" href="index.html"><img src="img/flogo.png" alt="더본로고"></a>
-                <a class="logo light" href="index.html"><img src="img/flogo-2.png" alt="더본로고"></a>
+                <a class="logo" href="index.html"><img src="resources/img/flogo.png" alt="더본로고"></a>
+                <a class="logo light" href="index.html"><img src="resources/img/flogo-2.png" alt="더본로고"></a>
                 <div class="companyInfo">
                     <ul>
                         <li>(주)더본코리아</li>
@@ -253,23 +258,23 @@
                     <p class="copyright">COPYRIGHTⓒ 2018 THEBORN KOREA INC. ALL RIGHTS RESERVED</p>
                 </div>
                 <div class="r_box">
-                    <div id="family_site" class="families">
+                    <div id="families" class="families">
                         <span>패밀리사이트 바로가기</span>
                         <ul id="fmenu">
-                            <li><a href="#" target="_blank">더본코리아</a></li>
-                            <li><a href="#">창업센터</a></li>
-                            <li><a href="#" target="_blank">새마을식당</a></li>
-                            <li><a href="#" target="_blank">한신포차</a></li>
-                            <li><a href="#" target="_blank">역전우동</a></li>
-                            <li><a href="#" target="_blank">백스비어</a></li>
-                            <li><a href="#">롤링파스타</a></li>
-                            <li><a href="#">인생설렁탕</a></li>
-                            <li><a href="#">미정국수</a></li>
-                            <li><a href="#">리춘시장</a></li>
-                            <li><a href="#" target="_blank">원조쌈밥집</a></li>
-                            <li><a href="#">돌배기집</a></li>
-                            <li><a href="#">백철판</a></li>
-                            <li><a href="#">호텔더본</a></li>
+                            <li class="items-disabled"><a href="#" target="_blank">더본코리아</a></li>
+                            <li class="items-disabled"><a href="#">창업센터</a></li>
+                            <li class="items-disabled"><a href="#" target="_blank">새마을식당</a></li>
+                            <li class="items-disabled"><a href="#" target="_blank">한신포차</a></li>
+                            <li class="items-disabled"><a href="#" target="_blank">역전우동</a></li>
+                            <li class="items-disabled"><a href="#" target="_blank">백스비어</a></li>
+                            <li class="items-disabled"><a href="#">롤링파스타</a></li>
+                            <li class="items-disabled"><a href="#">인생설렁탕</a></li>
+                            <li class="items-disabled"><a href="#">미정국수</a></li>
+                            <li class="items-disabled"><a href="#">리춘시장</a></li>
+                            <li class="items-disabled"><a href="#" target="_blank">원조쌈밥집</a></li>
+                            <li class="items-disabled"><a href="#">돌배기집</a></li>
+                            <li class="items-disabled"><a href="#">백철판</a></li>
+                            <li class="items-disabled"><a href="#">호텔더본</a></li>
                         </ul>
                     </div>
                 </div>
@@ -284,7 +289,7 @@
     </footer> <!-- END footer -->
 </div>
 
-<script src="/js/js.js"></script>
+<script src="resources/js/js.js"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37266520-11"></script>
 <script>
